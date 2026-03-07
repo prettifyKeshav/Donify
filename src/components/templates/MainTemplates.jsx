@@ -1,9 +1,12 @@
+import Header from "../organisms/Header"
+import Footer from "../organisms/Footer"
 
-
-const MainTemplates = () => {
+const MainTemplates = ({ children }) => {
     return (
         <>
-            
+            <Header />
+            <main>{children}</main>
+            <Footer />
         </>
     )
 }
