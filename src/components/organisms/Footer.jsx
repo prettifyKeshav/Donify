@@ -84,7 +84,7 @@ const Footer = () => {
                 </div>
 
                 <div className="payment-method">
-                  <Image src="/assets/images/Footer/payment-method.png" height={39} width={228} alt="payment-method" title="payment-method"></Image>
+                  <Image src="/assets/images/Footer/payment-method.png" height={39} width={228} alt="payment-method" title="payment-git"></Image>
                 </div>
               </div>
 
