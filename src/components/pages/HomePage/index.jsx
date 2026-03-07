@@ -1,5 +1,8 @@
 import "../../../../uploads/styles/home/home.css"
 import Hero from "../../organisms/Hero"
+import AboutDonify from "./AboutDonify"
+import OurFocused from "./OurFocused"
+import TopDonation from "./TopDonation"
 
 const HomePage = () => {
     return (
@@ -13,6 +16,10 @@ const HomePage = () => {
                 btnChildren="Start a fundraiser"
                 btnClassName="btn primary-btn"
             />
+            <TopDonation />
+            <AboutDonify />
+            <OurFocused />
+
         </>
     )
 }

@@ -10,4 +10,184 @@
     opacity: 0;
     left: 100%;
   }
+}
+.home-secA {
+  background: #F8ECE6;
+  padding: 20px 0;
+}
+.home-secA .home-secA-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide figure {
+  width: 69px;
+  height: 64px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide figcaption h4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide figcaption p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--primary);
+}
+
+.home-secB {
+  padding: 70px 0;
+}
+.home-secB .flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+.home-secB .flex-box figure {
+  width: 436px;
+  height: 404px;
+}
+.home-secB .flex-box figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.home-secB .flex-box .content h2 {
+  margin-bottom: 10px;
+}
+.home-secB .flex-box .content p {
+  max-width: 634px;
+}
+.home-secB .flex-box .content .flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 40px 0;
+  gap: 0;
+}
+.home-secB .flex-box .content .flex-box span {
+  border: 1px solid rgba(0, 0, 0, 0.2196078431);
+  height: 50px;
+}
+.home-secB .flex-box .content .flex-box .col {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.home-secB .flex-box .content .flex-box .col figure {
+  width: 57px;
+  height: 57px;
+}
+.home-secB .flex-box .content .flex-box .col figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.home-secB .flex-box .content .flex-box .col .content h6 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.home-secB .flex-box .content .flex-box .col .content p {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.home-secC {
+  background: #173254;
+  padding: 50px 0;
+  margin-bottom: 200px;
+}
+.home-secC .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+.home-secC .flex-box .content h2 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5019607843);
+  margin-bottom: 50px;
+}
+.home-secC .flex-box .content h3 {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.home-secC .flex-box .content p {
+  max-width: 508px;
+  color: rgba(255, 255, 255, 0.6980392157);
+  margin-bottom: 30px;
+}
+.home-secC .flex-box .content .flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 50px 0 40px;
+  gap: 0;
+}
+.home-secC .flex-box .content .flex-box span {
+  border: 1px solid rgba(255, 255, 255, 0.3803921569);
+  height: 70px;
+}
+.home-secC .flex-box .content .flex-box .col h6 {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: var(--white);
+  line-height: 1;
+}
+.home-secC .flex-box .content .flex-box .col p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+  max-width: 168px;
+  margin-bottom: 0;
+}
+.home-secC .flex-box .swiper {
+  flex: 1;
+}
+.home-secC .flex-box .swiper .swiper-wrapper .swiper-slide figure {
+  height: 449px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.home-secC .flex-box .swiper .swiper-wrapper .swiper-slide figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.2;
+  transition: 0.5s ease;
+}
+.home-secC .flex-box .swiper .swiper-wrapper .swiper-slide.swiper-slide-active figure img {
+  opacity: 1;
+}
+.home-secC .flex-box .swiper .swiper-pagination-progressbar {
+  position: relative;
+  margin-top: 20px;
+  height: 4px;
+  background: #ddd;
+}
+.home-secC .flex-box .swiper .swiper-pagination-progressbar-fill {
+  background: #000;
 }/*# sourceMappingURL=home.css.map */

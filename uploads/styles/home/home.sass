@@ -1,2 +1,155 @@
 @import '../_var'
 
+.home-secA
+    background: #F8ECE6
+    padding: 20px 0
+    .home-secA-swiper
+        .swiper-wrapper
+            transition-timing-function: linear !important
+            .swiper-slide
+                display: flex
+                align-items: center
+                gap: 20px
+                figure
+                    width: 69px
+                    height: 64px
+                    border-radius: 5px
+                    overflow: hidden
+                    img
+                        height: 100%
+                        width: 100%
+                        object-fit: contain
+                figcaption
+                    h4
+                        font-weight: 500
+                        font-size: 16px
+                        line-height: 1
+                        margin-bottom: 5px
+                    p
+                        font-weight: 600
+                        font-size: 20px
+                        line-height: 1
+                        color: $primary
+
+
+.home-secB
+    padding: 70px 0
+    .flex-box
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 70px
+        figure
+            width: 436px
+            height: 404px
+            img
+                height: 100%
+                width: 100%
+                object-fit: contain
+        .content
+            h2
+                margin-bottom: 10px
+            p
+                max-width: 634px
+            .flex-box
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin: 30px 0 40px 0
+                gap: 0
+                span
+                    border: 1px solid #00000038
+                    height: 50px
+                .col
+                    display: flex
+                    align-items: center
+                    gap: 20px
+                    figure
+                        width: 57px
+                        height: 57px
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: contain
+                    .content
+                        h6
+                            font-weight: 600
+                            font-size: 24px
+                            line-height: 1
+                            margin-bottom: 5px
+                        p
+                            font-weight: 500
+                            font-size: 15px
+                            line-height: 1
+
+.home-secC
+    background: #173254
+    padding: 50px 0
+    margin-bottom: 200px
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 60px
+        .content
+            h2
+                font-weight: 500
+                font-size: 12px
+                line-height: 24px
+                text-transform: uppercase
+                color: #FFFFFF80
+                margin-bottom: 50px
+
+            h3
+                color: $white
+                margin-bottom: 10px
+            p
+                max-width: 508px
+                color: #FFFFFFB2
+                margin-bottom: 30px
+            .flex-box
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+                margin: 50px 0 40px
+                gap: 0
+                span
+                    border: 1px solid #FFFFFF61
+                    height: 70px
+                .col
+                    h6
+                        font-weight: 600
+                        font-size: 28px
+                        margin-bottom: 10px
+                        color: $white
+                        line-height: 1
+                    p
+                        font-weight: 400
+                        font-size: 15px
+                        line-height: 1.2
+                        max-width: 168px
+                        margin-bottom: 0
+        .swiper
+            flex: 1
+            .swiper-wrapper
+                .swiper-slide
+                    figure
+                        height: 449px
+                        border-radius: 15px
+                        overflow: hidden
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: cover
+                            opacity: 0.2
+                            transition: 0.5s ease
+                    &.swiper-slide-active
+                        figure
+                            img
+                                opacity: 1
+            .swiper-pagination-progressbar
+                position: relative
+                margin-top: 20px
+                height: 4px
+                background: #ddd
+            .swiper-pagination-progressbar-fill
+                background: #000
