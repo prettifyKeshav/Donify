@@ -11,20 +11,164 @@
     left: 100%;
   }
 }
-.awards_slider {
-  margin-top: 60px;
+.donor-card {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
-.awards_slider .swiper-wrapper {
-  transition-timing-function: linear !important;
+.donor-card:hover figure img {
+  scale: 1.1;
 }
-.awards_slider .swiper-wrapper figure {
-  height: 75px;
+.donor-card figure {
+  height: 226px;
+  overflow: hidden;
+  position: relative;
 }
-.awards_slider .swiper-wrapper figure:hover img {
-  filter: grayscale(0);
+.donor-card figure::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: white;
+  box-shadow: 0 0 55px 12px white;
+  transform: skewX(-20deg);
+  z-index: 1;
 }
-.awards_slider .swiper-wrapper figure img {
-  filter: grayscale(1);
-  -o-object-fit: contain;
-     object-fit: contain;
+.donor-card figure:hover::before {
+  animation: shine 0.4s linear;
+  animation-fill-mode: none;
+}
+.donor-card figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s ease;
+}
+.donor-card figcaption {
+  padding: 20px;
+}
+.donor-card figcaption h4 {
+  font-weight: 600;
+  color: var(--black);
+  font-size: 20px;
+}
+.donor-card figcaption p {
+  font-weight: 500;
+  color: var(--text);
+  font-size: 16px;
+}
+.donor-card figcaption .bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.donor-card figcaption .bottom-flex .title h6 {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--black);
+  line-height: 1;
+  margin-bottom: 5px;
+}
+.donor-card figcaption .bottom-flex .title h5 {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--primary);
+  line-height: 1;
+}
+.donor-card figcaption .bottom-flex .btn {
+  border-radius: 25px;
+  padding: 11px 18px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  display: inline-block;
+  color: var(--white);
+  transition: 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+.donor-card figcaption .bottom-flex .btn.primary-btn {
+  background: var(--primary);
+  border: 1px solid var(--primary);
+}
+.donor-card figcaption .bottom-flex .btn.primary-btn:hover {
+  background: transparent;
+  color: var(--primary);
+}
+
+.swiper-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  top: 9%;
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-direction: row;
+}
+@media only screen and (max-width: 1024px) {
+  .swiper-nav {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .swiper-nav {
+    top: 6%;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .swiper-nav {
+    display: none;
+  }
+}
+.swiper-nav.center-full-full {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  z-index: 2;
+}
+.swiper-nav button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  transition: 0.4s ease;
+}
+.swiper-nav button.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+}
+.swiper-nav button svg {
+  vertical-align: middle;
+  width: 15px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.swiper-nav button svg path {
+  fill: var(--white);
+}
+.swiper-nav button:hover {
+  background: var(--white);
+}
+.swiper-nav button:hover svg path {
+  fill: var(--black);
+}
+.swiper-nav button.white-btn {
+  background: var(--white);
+}
+.swiper-nav button.white-btn svg path {
+  fill: var(--black);
 }/*# sourceMappingURL=component.css.map */

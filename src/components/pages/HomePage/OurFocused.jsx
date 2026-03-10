@@ -60,6 +60,8 @@ const OurFocused = () => {
                             slidesPerView={1.5}
                             spaceBetween={30}
                             speed={1000}
+                            navigation={true}
+                            pagination={true}
                         />
 
                     </div>

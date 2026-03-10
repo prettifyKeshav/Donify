@@ -1,15 +1,122 @@
 @import '../_var'
 
-// Awards Slider
-.awards_slider
-    margin-top: 60px
-    .swiper-wrapper
-        transition-timing-function: linear !important
+.donor-card
+    background: $white
+    border-radius: 8px
+    box-shadow: 0px 2px 8px 0px #63636333
+    display: inline-block
+    width: 100%
+    height: 400px
+    overflow: hidden
+    &:hover
         figure
-            height: 75px
-            &:hover
-                img
-                    filter: grayscale(0)
             img
-                filter: grayscale(1)
-                object-fit: contain
+                scale: 1.1
+    figure
+        height: 226px
+        overflow: hidden
+        @include shine
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+            transition: 0.5s ease
+
+    figcaption
+        padding: 20px
+        h4
+            font-weight: 600
+            color: $black
+            font-size: 20px
+        p
+            font-weight: 500
+            color: $text
+            font-size: 16px
+        .bottom-flex
+            display: flex
+            justify-content: space-between
+            margin-top: 40px
+            .title
+                h6
+                    font-weight: 500
+                    font-size: 16px
+                    color: $black
+                    line-height: 1
+                    margin-bottom: 5px
+                h5
+                    font-weight: 600
+                    font-size: 20px
+                    color: $primary
+                    line-height: 1
+            .btn
+                border-radius: 25px
+                padding: 11px 18px
+                font-weight: 600
+                font-size: 16px
+                line-height: 1
+                display: inline-block
+                color: $white
+                transition: 0.4s ease
+                position: relative
+                z-index: 1
+                &.primary-btn
+                    background: $primary
+                    border: 1px solid $primary
+                    &:hover
+                        background: transparent
+                        color: $primary
+
+
+.swiper-nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 20px
+    position: relative
+    top: 9%
+    width: fit-content
+    flex-direction: row
+    @include media(1024)
+        width: 35%
+    @include media(991) 
+        top: 6%
+        width: 40%
+    @include media(540)
+        display: none
+    &.center-full-full
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        width: 98%
+        z-index: 2
+    button
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        border: 1px solid $white
+        transition: 0.4s ease
+        &.swiper-button-disabled
+            opacity: 0.5
+            cursor: no-drop
+        svg
+            vertical-align: middle
+            width: 15px
+            height: fit-content
+            path
+                fill: $white
+        &:hover
+            background: $white
+            svg
+                path
+                    fill: $black
+        &.white-btn
+            background: $white
+            svg
+                path
+                    fill: $black
+
+
+
+
+

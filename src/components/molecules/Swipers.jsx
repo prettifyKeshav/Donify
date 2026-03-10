@@ -1,9 +1,12 @@
-"use client"
+"use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import Image from "next/image";
+import MonthlyDonorCard from "./MonthlyDonorCard";
 
 const Swipers = ({
     className = "",
@@ -15,41 +18,91 @@ const Swipers = ({
     autoplay,
     loop,
     speed,
+    pagination = false,
+    navigation = false,
+    swiperSlideCard,
+    swiperNavBtn,
+    swiperNavClass
 }) => {
-    return (
-        <Swiper
-            modules={[Autoplay]}
-            spaceBetween={spaceBetween}
-            slidesPerView={slidesPerView}
-            className={className}
-            loop={loop}
-            autoplay={autoplay ? { delay: 0, disableOnInteraction: false } : false}
-            speed={speed}
-            pagination={{
-                    type: "progressbar",
-                    el: ".swiper-pagination",
-                    clickable: true,
-                    progressbarFillClass: "swiper-pagination-progressbar-fill",
-                }}
-        >
-            {data.map((item, index) => (
-                <SwiperSlide key={index}>
-                    <figure>
-                        <Image
-                            src={item.figureImageSrc}
-                            width={imageWidth}
-                            height={imageHeight}
-                            alt="figure image"
-                        />
-                    </figure>
 
-                    <figcaption>
-                        <h4>{item.heading}</h4>
-                        <p>{item.description}</p>
-                    </figcaption>
-                </SwiperSlide>
-            ))}
-        </Swiper>
+    const modules = [];
+
+    if (autoplay) modules.push(Autoplay);
+    if (navigation) modules.push(Navigation);
+    if (pagination) modules.push(Pagination);
+
+    return (
+        <>
+            <Swiper
+                modules={modules}
+                spaceBetween={spaceBetween}
+                slidesPerView={slidesPerView}
+                className={className}
+                loop={loop}
+                speed={speed}
+                autoplay={autoplay ? { delay: 0, disableOnInteraction: false } : false}
+                navigation={
+                    navigation
+                        ? {
+                            prevEl: ".swiper-nav-prev",
+                            nextEl: ".swiper-nav-next",
+                        }
+                        : false
+                }
+                pagination={
+                    pagination
+                        ? {
+                            type: "progressbar",
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        }
+                        : false
+                }
+            >
+                {data.map((item, index) => (
+                    <SwiperSlide key={index}>
+                        {swiperSlideCard === "MonthlyDonorC" ? <MonthlyDonorCard  {...item} /> :
+                            <>
+                                <figure>
+                                    <Image
+                                        src={item.figureImageSrc}
+                                        width={imageWidth}
+                                        height={imageHeight}
+                                        alt="figure image"
+                                    />
+                                </figure>
+
+                                {(item.heading || item.description) && (
+                                    <figcaption>
+                                        {item.heading && <h4>{item.heading}</h4>}
+                                        {item.description && <p>{item.description}</p>}
+                                    </figcaption>
+                                )}
+                            </>
+                        }
+                    </SwiperSlide>
+                ))}
+
+            </Swiper>
+            {(pagination || navigation) && (
+                <div className="custom-pagination">
+                    {pagination && <div className="swiper-pagination"></div>}
+
+                    {navigation && (
+                        <div className={`swiper-nav ${swiperNavClass}`}>
+                            <button className={`swiper-nav-prev ${swiperNavBtn}`}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 20 20"><path fill="#173254" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z" /></svg>
+                            </button>
+
+                            <button className={`swiper-nav-next ${swiperNavBtn}`}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 20 20"><path fill="#173254" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z" /></svg>
+                            </button>
+                        </div>
+                    )}
+                </div>
+            )}
+
+        </>
     );
 };
 

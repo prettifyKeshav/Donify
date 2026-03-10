@@ -1,6 +1,8 @@
 import "../../../../uploads/styles/home/home.css"
 import Hero from "../../organisms/Hero"
 import AboutDonify from "./AboutDonify"
+import MonthlyDoner from "./MonthlyDoner"
+import NGOs from "./NGOs"
 import OurFocused from "./OurFocused"
 import TopDonation from "./TopDonation"
 
@@ -19,6 +21,8 @@ const HomePage = () => {
             <TopDonation />
             <AboutDonify />
             <OurFocused />
+            <MonthlyDoner />
+            <NGOs />
 
         </>
     )
