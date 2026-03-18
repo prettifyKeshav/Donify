@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -22,86 +22,95 @@ const Swipers = ({
     navigation = false,
     swiperSlideCard,
     swiperNavBtn,
-    swiperNavClass
+    swiperNavClass,
+    SwiperPaginationClass
 }) => {
 
+    const [swiperInstance, setSwiperInstance] = useState(null);
+    const paginationRef = useRef(null);
     const modules = [];
 
     if (autoplay) modules.push(Autoplay);
-    if (navigation) modules.push(Navigation);
     if (pagination) modules.push(Pagination);
 
     return (
         <>
-            <Swiper
-                modules={modules}
-                spaceBetween={spaceBetween}
-                slidesPerView={slidesPerView}
-                className={className}
-                loop={loop}
-                speed={speed}
-                autoplay={autoplay ? { delay: 0, disableOnInteraction: false } : false}
-                navigation={
-                    navigation
-                        ? {
-                            prevEl: ".swiper-nav-prev",
-                            nextEl: ".swiper-nav-next",
+            <div className="swiper-group">
+                <Swiper
+                    modules={modules}
+                    spaceBetween={spaceBetween}
+                    slidesPerView={slidesPerView}
+                    className={className}
+                    loop={loop}
+                    speed={speed}
+                    autoplay={autoplay ? { delay: 0, disableOnInteraction: false } : false}
+                    navigation={false}
+                    onSwiper={setSwiperInstance}
+                    pagination={
+                        pagination
+                            ? {
+                                type: "progressbar",
+                                clickable: true,
+                                el: paginationRef.current,
+                            }
+                            : false
+                    }
+                    onBeforeInit={(swiper) => {
+                        if (pagination && paginationRef.current) {
+                            swiper.params.pagination.el = paginationRef.current;
                         }
-                        : false
-                }
-                pagination={
-                    pagination
-                        ? {
-                            type: "progressbar",
-                            el: ".swiper-pagination",
-                            clickable: true,
-                        }
-                        : false
-                }
-            >
-                {data.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        {swiperSlideCard === "MonthlyDonorC" ? <MonthlyDonorCard  {...item} /> :
-                            <>
-                                <figure>
-                                    <Image
-                                        src={item.figureImageSrc}
-                                        width={imageWidth}
-                                        height={imageHeight}
-                                        alt="figure image"
-                                    />
-                                </figure>
+                    }}
+                >
+                    {data.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            {swiperSlideCard === "MonthlyDonorC" ? <MonthlyDonorCard  {...item} /> :
+                                <>
+                                    <figure>
+                                        <Image
+                                            src={item.figureImageSrc}
+                                            width={imageWidth}
+                                            height={imageHeight}
+                                            alt="figure image"
+                                        />
+                                    </figure>
 
-                                {(item.heading || item.description) && (
-                                    <figcaption>
-                                        {item.heading && <h4>{item.heading}</h4>}
-                                        {item.description && <p>{item.description}</p>}
-                                    </figcaption>
-                                )}
-                            </>
-                        }
-                    </SwiperSlide>
-                ))}
+                                    {(item.heading || item.description) && (
+                                        <figcaption>
+                                            {item.heading && <h4>{item.heading}</h4>}
+                                            {item.description && <p>{item.description}</p>}
+                                        </figcaption>
+                                    )}
+                                </>
+                            }
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                {(pagination || navigation) && (
+                    <div className="custom-pagination">
+                        {pagination && (
+                            <div
+                                className={`swiper-pagination ${SwiperPaginationClass || ""}`}
+                                ref={paginationRef}
+                            ></div>
+                        )}
 
-            </Swiper>
-            {(pagination || navigation) && (
-                <div className="custom-pagination">
-                    {pagination && <div className="swiper-pagination"></div>}
-
-                    {navigation && (
-                        <div className={`swiper-nav ${swiperNavClass}`}>
-                            <button className={`swiper-nav-prev ${swiperNavBtn}`}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 20 20"><path fill="#173254" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z" /></svg>
-                            </button>
-
-                            <button className={`swiper-nav-next ${swiperNavBtn}`}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 20 20"><path fill="#173254" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z" /></svg>
-                            </button>
-                        </div>
-                    )}
-                </div>
-            )}
-
+                        {navigation && (
+                            <div className={`swiper-nav ${swiperNavClass}`}>
+                                <button className={`swiper-nav-prev ${swiperNavBtn}`} onClick={() => swiperInstance?.slidePrev()} >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 20 20">
+                                        <path fill="#173254" d="m4 10l9 9l1.4-1.5L7 10l7.4-7.5L13 1z" />
+                                    </svg>
+                                </button>
+                                <button className={`swiper-nav-next ${swiperNavBtn}`} onClick={() => swiperInstance?.slideNext()} >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 20 20">
+                                        <path fill="#173254" d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                )}
+            </div>
         </>
     );
 };

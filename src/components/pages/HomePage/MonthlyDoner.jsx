@@ -108,9 +108,12 @@ const MonthlyDoner = () => {
                                 data={cards}
                                 swiperNavBtn="white-btn"
                                 swiperNavClass="center-full-full"
+
                             />
 
-                            <Button className="btn secondary-border" href="/">View all</Button>
+                            <div className="btn-wrapper">
+                                <Button className="btn secondary-border" href="/">View all</Button>
+                            </div>
 
                             {/* {cards.map((card, index) => (
                                 <MonthlyDonorCard key={index} {...card} />
