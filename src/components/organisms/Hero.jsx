@@ -8,9 +8,14 @@ const Hero = ({
     bgType = "image",
     bgSrc = "",
     title = "",
+    secondTitile = "",
     description = "",
     btnClassName,
-    btnChildren
+    btnChildren,
+    btnClassName2,
+    btnChildren2,
+    firstBtnHref,
+    secondBtnHref
 
 }) => {
     return (
@@ -36,10 +41,15 @@ const Hero = ({
                 <div className="container">
                     <div className="bg-wrapper">
                         <h1>{title}</h1>
+                        <h2>{secondTitile}</h2>
                         <p>{description}</p>
 
-                        <Button className={btnClassName}>
+                        <Button href={firstBtnHref} className={btnClassName} >
                             {btnChildren}
+                        </Button>
+
+                        <Button href={secondBtnHref} className={btnClassName2} >
+                            {btnChildren2}
                         </Button>
                     </div>
                 </div>

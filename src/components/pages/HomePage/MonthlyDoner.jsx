@@ -1,5 +1,4 @@
 import Button from "../../atoms/Button";
-import MonthlyDonorCard from "../../molecules/MonthlyDonorCard"
 import Swipers from "../../molecules/Swipers"
 
 const MonthlyDoner = () => {
@@ -82,46 +81,44 @@ const MonthlyDoner = () => {
 
     return (
         <>
-            <div className="home-secD">
-                <div className="banner">
-                    <video playsInline autoPlay muted loop width="100%" height="100%" >
-                        <source src="/assets/video/home-secD-banner.mp4" type="video/mp4" />
-                    </video>
+            <section>
+                <div className="home-secD">
+                    <div className="banner">
+                        <video playsInline autoPlay muted loop width="100%" height="100%" >
+                            <source src="/assets/video/home-secD-banner.mp4" type="video/mp4" />
+                        </video>
 
-                    <div className="banner-wrapper">
-                        <div className="container">
-                            <h2>Become a Monthly Donor</h2>
-                            <h3>Donate <span>Mnthly</span></h3>
+                        <div className="banner-wrapper">
+                            <div className="container">
+                                <h2>Become a Monthly Donor</h2>
+                                <h3>Donate <span>Mnthly</span></h3>
 
-                            <Swipers
-                                className="home-secD-swiper"
-                                swiperSlideCard="MonthlyDonorC"
-                                imageWidth={381}
-                                imageHeight={226}
-                                slidesPerView={3}
-                                spaceBetween={20}
-                                speed={1000}
-                                navigation={true}
-                                autoplay={false}
-                                loop={false}
-                                pagination={false}
-                                data={cards}
-                                swiperNavBtn="white-btn"
-                                swiperNavClass="center-full-full"
+                                <Swipers
+                                    className="home-secD-swiper"
+                                    swiperSlideCard="MonthlyDonor"
+                                    imageWidth={381}
+                                    imageHeight={226}
+                                    slidesPerView={3}
+                                    spaceBetween={20}
+                                    speed={1000}
+                                    navigation={true}
+                                    autoplay={false}
+                                    loop={false}
+                                    pagination={false}
+                                    data={cards}
+                                    swiperNavBtn="white-btn"
+                                    swiperNavClass="center-full-full"
 
-                            />
+                                />
 
-                            <div className="btn-wrapper">
-                                <Button className="btn secondary-border" href="/">View all</Button>
+                                <div className="btn-wrapper">
+                                    <Button className="btn secondary-border" href="/">View all</Button>
+                                </div>
                             </div>
-
-                            {/* {cards.map((card, index) => (
-                                <MonthlyDonorCard key={index} {...card} />
-                            ))} */}
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 }

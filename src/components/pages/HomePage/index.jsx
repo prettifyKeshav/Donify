@@ -1,10 +1,13 @@
 import "../../../../uploads/styles/home/home.css"
 import Hero from "../../organisms/Hero"
 import AboutDonify from "./AboutDonify"
+import EmpoweringCommunities from "./EmpoweringCommunities"
 import MonthlyDoner from "./MonthlyDoner"
 import NGOs from "./NGOs"
 import OurFocused from "./OurFocused"
+import RaisingFunds from "./RaisingFunds"
 import TopDonation from "./TopDonation"
+import TrendingFundraisers from "./TrendingFundraisers"
 
 const HomePage = () => {
     return (
@@ -17,12 +20,16 @@ const HomePage = () => {
                 description="Donify is a purpose-driven crowdfunding platform enabling individuals, medical causes, and NGOs to raise funds efficiently in India, supported by strong governance, transparency, and donor confidence."
                 btnChildren="Start a fundraiser"
                 btnClassName="btn primary-btn"
+                firstBtnHref="/"
             />
             <TopDonation />
             <AboutDonify />
             <OurFocused />
             <MonthlyDoner />
+            <TrendingFundraisers />
             <NGOs />
+            <RaisingFunds />
+            <EmpoweringCommunities />
 
         </>
     )

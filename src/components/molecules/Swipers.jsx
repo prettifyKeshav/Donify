@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 import MonthlyDonorCard from "./MonthlyDonorCard";
+import FundraisersCard from "./FundraisersCard";
 
 const Swipers = ({
     className = "",
@@ -63,24 +64,25 @@ const Swipers = ({
                 >
                     {data.map((item, index) => (
                         <SwiperSlide key={index}>
-                            {swiperSlideCard === "MonthlyDonorC" ? <MonthlyDonorCard  {...item} /> :
-                                <>
-                                    <figure>
-                                        <Image
-                                            src={item.figureImageSrc}
-                                            width={imageWidth}
-                                            height={imageHeight}
-                                            alt="figure image"
-                                        />
-                                    </figure>
+                            {swiperSlideCard === "MonthlyDonor" ? <MonthlyDonorCard  {...item} /> :
+                                swiperSlideCard === "FundraisersCard" ? <FundraisersCard  {...item} /> :
+                                    <>
+                                        <figure>
+                                            <Image
+                                                src={item.figureImageSrc}
+                                                width={imageWidth}
+                                                height={imageHeight}
+                                                alt="figure image"
+                                            />
+                                        </figure>
 
-                                    {(item.heading || item.description) && (
-                                        <figcaption>
-                                            {item.heading && <h4>{item.heading}</h4>}
-                                            {item.description && <p>{item.description}</p>}
-                                        </figcaption>
-                                    )}
-                                </>
+                                        {(item.heading || item.description) && (
+                                            <figcaption>
+                                                {item.heading && <h4>{item.heading}</h4>}
+                                                {item.description && <p>{item.description}</p>}
+                                            </figcaption>
+                                        )}
+                                    </>
                             }
                         </SwiperSlide>
                     ))}
