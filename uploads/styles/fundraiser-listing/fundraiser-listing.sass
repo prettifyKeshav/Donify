@@ -1,0 +1,26 @@
+@import '../_var'
+
+.product-listing-banner
+    margin-top: var(--headerheight)
+    .banner
+        height: 60vh
+        overflow: hidden
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            width: 100%
+            height: 100%
+            inset: 1 1 1 1
+            background: linear-gradient(90deg, rgba(23, 50, 84, 0.8) 4.58%, rgba(102, 102, 102, 0) 91.61%)
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+
+.product-listing-section
+    .grid-box
+        display: grid
+        grid-template-columns: repeat(3,1fr)
+        gap: 35px 20px 
+        padding: 100px 0 60px 0 

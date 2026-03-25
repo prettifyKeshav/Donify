@@ -152,8 +152,6 @@ svg
 .social-icons
     user-select: none
 
-h1,h2,h3,h4,h5,h6
-    font-weight: normal
 
 ul 
     li
@@ -168,6 +166,9 @@ body
             font-size: 16px
             line-height: 1.4
             color: var(--text)
+
+h1,h2,h3,h4,h5,h6
+    font-weight: normal
 
 h1
 
@@ -184,23 +185,22 @@ h1
     @include media(540)
         font-size: 38px
 h2
-    font-family: Montserrat
+    font-family: Poppins
     font-weight: 700
-    font-size: 48px
+    font-size: 36px
     line-height: 1.3
-    color: #000000
+    color: $secondary
     @include media(768)
         font-size: 38px
     @include media(540)
         font-size: 26px
-        line-height: 1.3
         margin-bottom: 10px
     span
         color: $primary
-
+        
 h3
-    font-weight: 400
-    
+    font-weight: 600
+    font-size: 32
 h4
     font-size: 36px
     line-height: 1.28
@@ -357,6 +357,18 @@ button
         opacity: 1
         transform: translateY(0%)
 
+.not-found
+    figure
+        width: fit-content
+        margin: auto
+        img
+            width: 120px
+            margin-left: auto
+            margin-right: auto
+            filter: grayscale(1)
+    .no-data
+        text-align: center
+
 .btn
     border-radius: 25px
     padding: 11px 18px
@@ -381,7 +393,7 @@ button
         background: $primary
         border: 1px solid $primary
         &:hover
-            background: transparent
+            background: $white
             color: $primary
     &.secondary-btn
         background: $secondary
@@ -389,6 +401,21 @@ button
         &:hover
             background: transparent
             color: $secondary
+    &.secondary-btn-white
+        background: $white
+        border: 1px solid $white
+        color: $secondary
+        &:hover
+            background: $secondary
+            border: 1px solid $secondary
+            color: $white
+    &.primary-border
+        background: transparent
+        border: 1px solid $primary
+        color: $primary
+        &:hover
+            background: $primary
+            color: $white
     &.secondary-border
         background: transparent
         border: 1px solid $secondary

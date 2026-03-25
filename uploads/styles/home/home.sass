@@ -1,2 +1,695 @@
 @import '../_var'
 
+.home-secA
+    background: #F8ECE6
+    padding: 20px 0
+    .home-secA-swiper
+        .swiper-wrapper
+            transition-timing-function: linear !important
+            .swiper-slide
+                display: flex
+                align-items: center
+                gap: 20px
+                figure
+                    width: 69px
+                    height: 64px
+                    border-radius: 5px
+                    overflow: hidden
+                    img
+                        height: 100%
+                        width: 100%
+                        object-fit: contain
+                figcaption
+                    h4
+                        font-weight: 500
+                        font-size: 16px
+                        line-height: 1
+                        margin-bottom: 5px
+                    p
+                        font-weight: 600
+                        font-size: 20px
+                        line-height: 1
+                        color: $primary
+
+
+.home-secB
+    padding: 70px 0
+    .flex-box
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 70px
+        figure
+            width: 436px
+            height: 404px
+            img
+                height: 100%
+                width: 100%
+                object-fit: contain
+        .content
+            h2
+                margin-bottom: 10px
+                font-family: Poppins
+                font-weight: 700
+                font-size: 48px
+                line-height: 1.3
+                color: $secondary
+                @include media(768)
+                    font-size: 38px
+                @include media(540)
+                    font-size: 26px
+                    line-height: 1.3
+                    margin-bottom: 10px
+                span
+                    color: $primary
+            p
+                max-width: 634px
+            .flex-box
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin: 30px 0 40px 0
+                gap: 0
+                span
+                    border: 1px solid #00000038
+                    height: 50px
+                .col
+                    display: flex
+                    align-items: center
+                    gap: 20px
+                    figure
+                        width: 57px
+                        height: 57px
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: contain
+                    .content
+                        h6
+                            font-weight: 600
+                            font-size: 24px
+                            line-height: 1
+                            margin-bottom: 5px
+                        p
+                            font-weight: 500
+                            font-size: 15px
+                            line-height: 1
+
+.home-secC
+    background: #173254
+    padding: 50px 0
+    .flex-box
+        display: flex
+        justify-content: space-between
+        gap: 100px
+        .content
+            h2
+                font-weight: 500
+                font-size: 12px
+                line-height: 24px
+                text-transform: uppercase
+                color: #FFFFFF80
+                margin-bottom: 50px
+
+            h3
+                color: $white
+                margin-bottom: 10px
+            p
+                max-width: 508px
+                color: #FFFFFFB2
+                margin-bottom: 30px
+            .flex-box
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+                margin: 50px 0 40px
+                gap: 0
+                span
+                    border: 1px solid #FFFFFF61
+                    height: 70px
+                .col
+                    h6
+                        font-weight: 600
+                        font-size: 28px
+                        margin-bottom: 10px
+                        color: $white
+                        line-height: 1
+                    p
+                        font-weight: 400
+                        font-size: 15px
+                        line-height: 1.2
+                        max-width: 168px
+                        margin-bottom: 0
+        .swiper-group
+            flex: 1
+            width: 50%  
+        .swiper
+            flex: 1
+            .swiper-wrapper
+                height: fit-content
+                // margin: 0 0 30px 0
+                .swiper-slide
+                    height: fit-content
+                    figure
+                        height: 449px
+                        border-radius: 15px
+                        overflow: hidden
+                        line-height: 0
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: cover
+                            opacity: 0.2
+                            transition: 0.5s ease
+                    &.swiper-slide-active
+                        figure
+                            img
+                                opacity: 1
+        .swiper-pagination-progressbar
+            position: relative
+            height: 2px
+            background: #FFFFFF66 
+        .swiper-pagination-progressbar-fill
+            background: $primary !important
+        .custom-pagination
+            display: flex
+            align-items: center
+            gap: 50px
+            margin: 30px 0 0 0
+            .swiper-pagination
+                width: 65%
+                position: relative
+                .swiper-pagination-progressbar-fill
+                    background: $white
+            .swiper-nav
+                display: flex
+                align-items: center
+                justify-content: space-between
+                gap: 20px
+                position: relative
+                top: 9%
+                width: fit-content
+                flex-direction: row
+                @include media(1024)
+                    width: 35%
+                @include media(991) 
+                    top: 6%
+                    width: 40%
+                @include media(540)
+                    display: none
+                button
+                    width: 40px
+                    height: 40px
+                    border-radius: 50%
+                    border: 1px solid $white
+                    transition: 0.4s ease
+                    &.swiper-button-disabled
+                        opacity: 0.5
+                        cursor: no-drop
+                    svg
+                        vertical-align: middle
+                        width: 15px
+                        height: fit-content
+                        path
+                            fill: $white
+                    &:hover
+                        background: $white
+                        svg
+                            path
+                                fill: $black
+
+.home-secD
+    position: relative
+    line-height: 0
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        inset: 0
+        background: linear-gradient(360deg, #FAEFE9 0%, rgba(243, 110, 42, 0.96) 100%)
+        z-index: 1
+    .banner
+        video
+            height: 100%
+            width: 100%
+            object-fit: cover
+            mix-blend-mode: luminosity
+        .banner-wrapper
+            position: absolute
+            top: 0%
+            left: 0%
+            height: 100%
+            width: 100%
+            padding: 50px 0 
+            h2
+                font-weight: 600
+                text-transform: uppercase
+                font-size: 18px
+                text-align: center
+                color: $white
+                margin-bottom: 20px
+            h3
+                font-family: "Dela Gothic One"
+                font-weight: 400
+                font-size: 64px
+                line-height: 1
+                text-align: center
+                text-transform: uppercase
+                margin-bottom: 50px
+
+            .btn-wrapper
+                width: 100%
+                text-align: center
+                margin-top: 50px
+                a
+                    padding: 11px 38px
+
+.pin-line
+    position: relative
+    background-color: var(--white)
+    height: 17px
+    &::before
+        content: ""
+        position: absolute
+        z-index: 1
+        left: 0
+        top: 8px
+        width: 100%
+        height: -moz-fit-content
+        height: fit-content
+        border-bottom: 2px dashed $primary
+    figure
+        width: 91px
+        height: 91px
+        border-radius: 50%
+        background: $white
+        border: 1px solid $primary
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        z-index: 1
+        
+        display: flex
+        justify-content: center
+        align-items: center
+
+
+
+.home-secF
+    .banner
+        height: 100vh
+        overflow: hidden
+        background: #173254
+        .banner-img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            opacity: 0.1
+        .banner-wrapper
+            .heading
+                h2
+                    font-weight: 700
+                    font-size: 36px
+                    text-align: center
+                    color: $white
+                    max-width: 493px
+                    margin: 0 auto 10px
+                    line-height: 1.3
+                p
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 24px
+                    text-align: center
+                    color: #FFFFFF
+            .ngo-swiper
+                .swiper-wrapper
+                    padding: 40px 0 
+                    .swiper-slide
+                        background: $white
+                        border-radius: 10px
+                        overflow: hidden
+                        height: 194px
+                        padding: 30px 20px
+                        figure
+                            width: 88px
+                            height: 88px
+                            margin: 0 auto 20px
+                            img
+                                height: 100%
+                                width: 100%
+                                object-fit: cover
+                        figcaption
+                            h4
+                                font-weight: 500
+                                line-height: 1.1
+                                font-size: 16px
+                                color: $text
+                                text-align: center
+            .custom-pagination
+                display: flex
+                justify-content: center
+                align-items: center
+                position: relative
+                margin: 30px auto 0
+                .swiper-pagination
+                    max-width: 284px
+                    position: static !important
+                    .swiper-pagination-progressbar-fill
+                        background: $white
+                .swiper-pagination-progressbar
+                    position: relative
+                    height: 2px
+                    background: #FFFFFF66 
+                .swiper-pagination-progressbar-fill
+                    background: $primary !important
+                .custom-pagination
+                    display: flex
+                    align-items: center
+                    gap: 50px
+                    margin: 30px 0 0 0
+                        
+                .swiper-nav
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    width: 30%
+
+section:has(.home-secE)
+    position: relative
+    overflow: hidden
+    &::before
+        content: ""
+        z-index: 0
+        background: url(/assets/images/Home/Ellipse-vector2.png) no-repeat
+        width: 199px
+        height: 203px
+        position: absolute
+        top: -9%
+        left: -3%
+        transform: scaleX(-1)
+        @include media(540)
+            width: 250px
+            height: 350px
+            background-size: contain
+    &::after
+        content: ""
+        z-index: 0
+        background: url(/assets/images/Home/Ellipse-vector2.png) no-repeat
+        width: 240px
+        height: 228px
+        position: absolute
+        top: -5%
+        right: 0%
+        transform: scaleY(1) scaleX(1)
+        background-size: contain
+        @include media(540)
+            width: 250px
+            height: 350px
+            background-size: contain
+
+.home-secE
+    padding: 50px 0 100px 0
+    overflow: hidden
+    .heading
+        text-align: center
+        margin-bottom: 50px
+        p
+            font-weight: 500
+            font-size: 16px
+            line-height: 24px
+            text-align: center
+            color: #666666B2
+        figure
+            width: fit-content
+            height: fit-content
+            line-height: 0
+            margin: 0 auto 10px
+
+    .tab-nav
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 80px
+        padding: 0
+        position: relative
+        margin-bottom: 50px
+        &::before
+            content: ""
+            width: 100vw
+            height: 1px
+            background: $primary
+            position: absolute
+            top: 27%
+            left: 50%
+            transform: translate(-50%, -50%)
+        li
+            font-weight: 500
+            font-size: 16px
+            text-align: center
+            color: $text
+            transition: 0.5s ease
+            position: relative
+            padding: 65px 0 0
+            cursor: pointer
+            &.active
+                color: $primary
+                figure
+                    background: $primary
+                    svg
+                        path
+                            fill: $white
+            figure
+                height: 45px
+                width: 45px
+                border-radius: 50%
+                border: 1px solid #F36E2A
+                display: flex
+                justify-content: center
+                align-items: center
+                background: $white
+                position: absolute
+                top: 26%
+                left: 50%
+                transform: translate(-50%, -50%)
+                transition: 0.5s ease
+                padding: 10px
+
+    .swiper-nav
+        top: 42% !important
+
+section:has(.home-secG)
+    position: relative
+    overflow: hidden
+    &::before
+        content: ""
+        position: absolute
+        background: url("/assets/images/Home/Ellipse-vector.png") no-repeat
+        z-index: 0
+        width: 199px
+        height: 333px
+        bottom: -30%
+        left: 0
+        transform: scale(-1)
+        @include media(540)
+            width: 250px
+            height: 350px
+            background-size: contain
+    &::after
+        content: ""
+        z-index: 0
+        background: url(/assets/images/Home/Ellipse-vector.png) no-repeat
+        width: 240px
+        height: 338px
+        position: absolute
+        top: -20%
+        right: 0%
+        transform: scaleY(1) scaleX(1)
+        background-size: contain
+        @include media(540)
+            width: 250px
+            height: 350px
+            background-size: contain
+
+.home-secG
+    padding: 60px 0
+    background: #F8ECE6
+    .flex-box
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .col:first-child
+            width: fit-content
+            margin-left: auto
+            h2
+                max-width: 407px
+                line-height: 1.1
+                margin-bottom: 10px
+            p
+                max-width: 394px
+            .btn-group
+                margin-top: 30px
+                display: flex
+                gap: 30px
+                align-items: center
+        .col:last-child
+            flex: 0 1 50%
+            width: 100%
+            figure
+                width: 200px
+                height: 400px
+                position: relative
+                margin: auto
+                img
+                    height: 100%
+                    width: 100%
+                    object-fit: contain
+                figcaption
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%,-50%)
+                    text-align: center
+                    line-height: 1
+                    
+                    .logo
+                        width: 84px
+                        height: 77px
+                        margin: auto
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: contain                            
+                    h3
+                        font-weight: 700
+                        font-size: 20px
+                        color: $primary
+                        margin: 30px 0
+                    .btn
+                        font-weight: 500
+                        font-size: 14px
+                        white-space: nowrap
+
+.home-secH
+    padding: 50px 0
+    overflow: hidden
+    h2
+        max-width: 390px
+        margin: auto
+        line-height: 1.1
+        text-align: center
+        margin-bottom: 50px
+    .tab-nav
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 80px
+        padding: 0
+        position: relative
+        margin-bottom: 50px
+        &::before
+            content: ""
+            width: 100vw
+            height: 1px
+            background: $primary
+            position: absolute
+            top: 20%
+            left: 50%
+            transform: translate(-50%, -50%)
+        li
+            font-weight: 500
+            font-size: 20px
+            text-align: center
+            color: $text
+            transition: 0.5s ease
+            position: relative
+            padding: 35px 0 0 
+            cursor: pointer
+            &.active
+                color: $primary
+                &::before
+                    background: $primary
+            &::before
+                content: ""
+                height: 22px
+                width: 22px
+                border-radius: 50%
+                border: 1px solid #F36E2A
+                background: $white
+                position: absolute
+                top: 18%
+                left: 50%
+                transform: translate(-50%, -50%)
+                transition: 0.5s ease
+
+.home-secI
+    img
+        margin-top: 0 !important
+    .hero-banner
+        height: 100vh
+        &::before
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0.6) 0%, rgba(102, 102, 102, 0) 78.85%)
+        .bg-wrapper
+            max-width: 525px
+            bottom: 30% !important
+            left: 77% !important
+            h2
+                color: $white
+                line-height: 1.1
+                margin-bottom: 10px
+            .btn-group
+                display: flex
+                gap: 30px
+                align-items: center
+
+.home-secJ
+    padding: 50px 0 
+    h2
+        text-align: center
+        max-width: 493px
+        line-height: 1.1
+        margin: 0 auto 50px
+    .swiper-nav
+        width: 54% !important
+
+    .swiper-slide-prev,.swiper-slide-next
+    .swiper-slide
+        backdrop-filter: blur(10px)
+        figcaption
+            opacity: 0
+            transition: 0.6s ease
+            
+    .swiper-slide-active
+        figcaption
+            opacity: 1
+
+    .bottom
+        text-align: center
+        margin: 40px auto 30px 
+
+.home-secK
+    padding: 50px 0 
+    h2
+        text-align: center
+    .grid-box
+        display: grid
+        grid-template-columns: repeat(6,1fr)
+        gap: 30px
+        margin: 50px 0
+        figure
+            width: 130px
+            height: 74px
+            margin: auto
+            img
+                height: 100%
+                width: 100%
+                object-fit: cover
+                                    
+
+
+
