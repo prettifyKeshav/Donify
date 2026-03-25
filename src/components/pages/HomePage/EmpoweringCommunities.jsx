@@ -15,7 +15,7 @@ const EmpoweringCommunities = () => {
                         btnChildren="Start a fundraiser"
                         btnClassName="btn primary-btn"
                         btnChildren2="Donate to a fundraiser"
-                        btnClassName2="btn primary-btn"
+                        btnClassName2="btn secondary-btn-white"
                         firstBtnHref="/"
                         secondBtnHref="/"
                     />

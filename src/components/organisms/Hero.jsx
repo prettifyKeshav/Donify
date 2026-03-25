@@ -44,13 +44,15 @@ const Hero = ({
                         <h2>{secondTitile}</h2>
                         <p>{description}</p>
 
-                        <Button href={firstBtnHref} className={btnClassName} >
-                            {btnChildren}
-                        </Button>
+                        <div className="btn-group">
+                            <Button href={firstBtnHref} className={btnClassName} >
+                                {btnChildren}
+                            </Button>
 
-                        <Button href={secondBtnHref} className={btnClassName2} >
-                            {btnChildren2}
-                        </Button>
+                            <Button href={secondBtnHref} className={btnClassName2} >
+                                {btnChildren2}
+                            </Button>
+                        </div>
                     </div>
                 </div>
 

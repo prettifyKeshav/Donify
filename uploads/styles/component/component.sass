@@ -74,6 +74,7 @@
     width: 100%
     // height: 546px
     overflow: hidden
+    // position: relative
     &:hover
         .figure
             img
@@ -94,6 +95,7 @@
     figcaption
         padding: 20px
         line-height: 0
+        position: relative
         h4
             color: $black
             font-weight: 600
@@ -245,18 +247,112 @@
             width: 90%
             text-align: center
             position: absolute
-            bottom: 5%
+            bottom: 7%
             opacity: 0
             width: 80%
             &:hover
                 background: $white
 
+.partners-card
+    border: 1px solid #CFCFCF
+    position: relative
+    overflow: hidden
+    background: linear-gradient(180deg, #FFFFFF 0%, #F7E3D8 100%)
+    height: 423px
+    border-radius: 15px
+    padding: 30px
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    .col:first-child
+        .qoma
+            width: 43px
+            height: 43px
+            margin: 0 0 10px 0 
+            img
+                height: 100%
+                width: 100%
+                object-fit: contain
+        .desc
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.3
+            color: $text
+    .col:last-child
+        gap: 20px
+        display: flex
+        align-items: center
+        padding-top: 40px
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            height: 5px 
+            background: $primary
+            width: 155px
+            top: 0
+            left: 0
+
+        figure
+            width: 64px
+            height: 64px
+            border-radius: 50%
+            overflow: hidden
+            img
+                height: 100%
+                width: 100%
+                object-fit: cover
+        figcaption
+            h4
+                font-weight: 600
+                font-size: 16px
+                color: $black
+                line-height: 1.4
+            p
+                font-weight: 400
+                font-size: 16px
+                color: $black
+                line-height: 1
+        
+.journey-Card
+    figure
+        width: 100%
+        position: relative
+        border-radius: 10px
+        overflow: hidden
+        line-height: 0
+        &::before
+            content: ""
+            position: absolute
+            inset: 1 1 1 1
+            width: 100%
+            height: 100%
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 36.89%, rgba(0, 0, 0, 0.8) 78.11%)
+            border-radius: 10px
+            overflow: hidden
+        img
+            height: 100%
+            width: 100%
+            object-fit: cover
+        figcaption
+            position: absolute
+            bottom: 0
+            left: 0
+            z-index: 1
+            padding: 30px  50px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            gap: 40px
+            h3
+                color: $white
+                font-weight: 600
+                font-size: 20px
+                line-height: 1.3
+
+
 .swiper-group
     position: relative
-
-// .swiper-wrapper
-//     max-width: 99%
-//     margin: auto
 
 .swiper-nav
     display: flex

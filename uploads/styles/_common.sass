@@ -357,6 +357,18 @@ button
         opacity: 1
         transform: translateY(0%)
 
+.not-found
+    figure
+        width: fit-content
+        margin: auto
+        img
+            width: 120px
+            margin-left: auto
+            margin-right: auto
+            filter: grayscale(1)
+    .no-data
+        text-align: center
+
 .btn
     border-radius: 25px
     padding: 11px 18px
@@ -381,7 +393,7 @@ button
         background: $primary
         border: 1px solid $primary
         &:hover
-            background: transparent
+            background: $white
             color: $primary
     &.secondary-btn
         background: $secondary
@@ -389,6 +401,14 @@ button
         &:hover
             background: transparent
             color: $secondary
+    &.secondary-btn-white
+        background: $white
+        border: 1px solid $white
+        color: $secondary
+        &:hover
+            background: $secondary
+            border: 1px solid $secondary
+            color: $white
     &.primary-border
         background: transparent
         border: 1px solid $primary

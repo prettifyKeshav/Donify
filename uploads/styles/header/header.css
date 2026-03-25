@@ -1157,6 +1157,21 @@ button {
   transform: translateY(0%);
 }
 
+.not-found figure {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+.not-found figure img {
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  filter: grayscale(1);
+}
+.not-found .no-data {
+  text-align: center;
+}
+
 .btn {
   border-radius: 25px;
   padding: 11px 18px;
@@ -1183,7 +1198,7 @@ button {
   border: 1px solid var(--primary);
 }
 .btn.primary-btn:hover {
-  background: transparent;
+  background: var(--white);
   color: var(--primary);
 }
 .btn.secondary-btn {
@@ -1193,6 +1208,16 @@ button {
 .btn.secondary-btn:hover {
   background: transparent;
   color: var(--secondary);
+}
+.btn.secondary-btn-white {
+  background: var(--white);
+  border: 1px solid var(--white);
+  color: var(--secondary);
+}
+.btn.secondary-btn-white:hover {
+  background: var(--secondary);
+  border: 1px solid var(--secondary);
+  color: var(--white);
 }
 .btn.primary-border {
   background: transparent;

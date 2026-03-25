@@ -41,8 +41,9 @@ const FundraisersCard = ({
                     )}
                 </div>
 
-                <h4>{CardHeading}</h4>
-
+                <Link href={detailLink}>
+                    <h4>{CardHeading}</h4>
+                </Link>
                 <div className="meta">
                     <span>{author}</span>
                     <span className="location">
@@ -83,7 +84,7 @@ const FundraisersCard = ({
             </figcaption>
 
 
-        </div>
+        </div >
     );
 };
 
