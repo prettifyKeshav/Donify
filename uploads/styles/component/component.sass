@@ -92,6 +92,21 @@
             width: 100%
             object-fit: cover
             transition: 0.5s ease
+        .category
+            position: absolute
+            top: 0
+            left: 0
+            margin: 20px
+
+            background: $white
+            padding: 9px 15px
+
+            font-weight: 500
+            font-size: 14px
+            line-height: 1
+            color: $text
+            border-radius: 25px
+
     figcaption
         padding: 20px
         line-height: 0
@@ -253,6 +268,81 @@
             &:hover
                 background: $white
 
+.ngo-card
+    box-shadow: 0px 2px 8px 0px #63636333
+    border-radius: 8px
+    .top   
+        border-bottom: 1px solid #E4E4E4
+        figure
+            width: 97px
+            height: 97px
+            border-radius: 5px
+            line-height: 0
+            margin: 0 auto 30px
+            margin: 30px auto
+            img
+                height: 100%
+                width: 100%
+                object-fit: contain
+    figcaption
+        padding: 30px 
+        .ngo-card__header
+            display: flex
+            align-items: center
+            gap: 6px
+            margin-bottom: 6px
+            h4
+                font-size: 18px
+                font-weight: 600
+                color: $black
+                margin: 0
+        .ngo-card__verified
+            display: flex
+            align-items: center
+        .ngo-card__location
+            display: flex
+            align-items: center
+            gap: 4px
+            span:last-child
+                font-weight: 500
+                font-size: 14px
+                line-height: 16px
+                color: $text
+
+        .flex-box
+            display: flex
+            gap: 24px
+            margin: 25px 0
+            justify-content: space-between
+            .center-line
+                height: 52px
+                border: 1px solid #EAEAEA
+
+            .col
+                display: flex
+                flex-direction: column
+                gap: 2px
+                p
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 16px
+                    color: $text
+                    margin-bottom: 6px
+                span
+                    font-weight: 500
+                    color: $black
+                    font-size: 16px
+
+        .btn-group
+            display: flex
+            justify-content: space-between
+            align-items: center
+            a
+                flex: 0 1 48%
+                text-align: center
+        
+
+
 .partners-card
     border: 1px solid #CFCFCF
     position: relative
@@ -350,6 +440,39 @@
                 font-size: 20px
                 line-height: 1.3
 
+.blogs-card
+    background: $white
+    border-radius: 8px
+    overflow: hidden
+    box-shadow: 0px 2px 8px 0px #63636333
+    display: inline-block
+    &:hover
+        img
+            scale: 1.2
+    figure
+        height: 254px
+        overflow: hidden
+        line-height: 0
+        @include shine
+        img
+            height: 100%
+            width: 100%
+            object-fit:  cover
+            transition: 0.5s ease
+    figcaption
+        padding: 20px
+        h4
+            font-weight: 600
+            color: $black
+            font-size: 18px
+            line-height: 1.3
+            margin-bottom: 30px 
+            display: -webkit-box
+            -webkit-line-clamp: 2
+            -webkit-box-orient: vertical
+            overflow: hidden
+            text-overflow: ellipsis
+
 
 .swiper-group
     position: relative
@@ -417,6 +540,68 @@
             svg
                 path
                     fill: $black
+
+.accordian-wrapper
+    background: $white
+    border-radius: 10px
+    width: 100%
+    border: 1px solid #D2D2D2
+    margin-bottom: 20px
+    cursor: pointer
+    position: relative
+    transition: 0.5s ease
+    &::before
+        content: ""
+        position: absolute
+        top: 35px
+        right: 24px
+        width: 16px
+        height: 2px
+        border-radius: 2px
+        background: #00000066
+        z-index: 1
+    &::after
+        content: ""
+        position: absolute
+        top: 35px
+        right: 24px
+        width: 16px
+        height: 2px
+        border-radius: 2px
+        background: #00000066
+        z-index: 1
+        transform: rotate(90deg)
+        transition: 0.4s ease
+    &.open
+        &::before
+            background: $black
+        &::after
+            transform: rotate(0deg)
+            background: $black
+        .title
+            margin-bottom: 10px
+            h4
+                color: $black
+                padding: 24px 24px 10px 24px
+    .title
+        display: flex
+        justify-content: space-between
+        transition: 0.4s ease
+        width: 100%
+        h4
+            font-weight: 600
+            font-size: 18px
+            line-height: 24px
+            color: #00000066
+            padding: 24px
+            transition: 0.4s ease
+    .description
+        p
+            padding: 0px 24px 24px 24px
+            font-weight: 400
+            font-size: 16px
+            line-height: 1.3
+            max-width: 85%
 
 
 

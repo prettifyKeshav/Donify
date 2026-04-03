@@ -12,10 +12,10 @@ const MonthlyDonorCard = ({
     CardPrice = "",
     CardPricePeriod = "",
     CardBtnText = "",
-    CardHref = "/",
+    detailLink = "/",
 }) => {
     return (
-        <Link href={CardHref} className="donor-card">
+        <Link href={detailLink} className="donor-card">
             <figure>
                 <Image src={CardImg} width={CardWidth} height={CardHeight} alt="img" />
             </figure>

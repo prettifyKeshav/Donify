@@ -5,6 +5,7 @@ import Button from "../atoms/Button";
 
 const FundraisersCard = ({
     CardImg,
+    CategoryName,
     CardHeading,
     author,
     location,
@@ -23,6 +24,7 @@ const FundraisersCard = ({
         <div className="fundraisers-card">
             <Link href={detailLink} className="figure">
                 <Image src={CardImg} width={381} height={226} alt="img" />
+                <div className="category">{CategoryName}</div>
             </Link>
 
             <figcaption>

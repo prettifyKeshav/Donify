@@ -123,8 +123,6 @@ small
 .fs-18
     font-size: 18px
 
-select
-    display: none
 a[href]
     text-decoration: none
     cursor: pointer
@@ -415,6 +413,14 @@ button
         color: $primary
         &:hover
             background: $primary
+            color: $white
+    &.gray-border
+        background: transparent
+        border: 1px solid #B1B1B1
+        color: #B1B1B1
+        &:hover
+            border: 1px solid $secondary
+            background: $secondary
             color: $white
     &.secondary-border
         background: transparent
@@ -1467,7 +1473,6 @@ button
                 @include media(540)
                     margin: 10px auto 30px
 
-
 // Commen contact form 
 .contact-form
     padding: 50px 0
@@ -1504,3 +1509,14 @@ button
 
 .swiper-button-lock
     opacity: 0
+
+@keyframes spin 
+    from 
+        transform: rotate(0deg)
+    to 
+        transform: rotate(360deg)
+        
+.rotate-infinite
+    animation: spin 20s linear infinite
+        
+        

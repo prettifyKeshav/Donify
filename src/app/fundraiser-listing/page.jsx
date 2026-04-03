@@ -1,10 +1,10 @@
 import React from 'react'
 import FundraiserListingPage from '@/src/components/pages/FundraiserListingPage'
 
-const page = () => {
+const FundraiserListing = () => {
     return (
         <FundraiserListingPage />
     )
 }
 
-export default page
+export default FundraiserListing

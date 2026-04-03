@@ -37,7 +37,7 @@ const Footer = () => {
                 <h6>About Us</h6>
                 <ul>
                   <li><Link href="/">About Donify</Link></li>
-                  <li><Link href="/">Blogs</Link></li>
+                  <li><Link href="/blogs">Blogs</Link></li>
                   <li><Link href="/">FAQ’s</Link></li>
                   <li><Link href="/">Contact Us</Link></li>
                 </ul>
