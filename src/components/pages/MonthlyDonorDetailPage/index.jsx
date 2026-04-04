@@ -224,7 +224,7 @@ const MonthlyDonorDetailPage = () => {
                                 </div>
 
                                 <div className="stories-of-hope">
-                                    <h2>StoriesHope</h2>
+                                    <h2>Stories of Hope</h2>
 
                                     <StoriesHope />
                                 </div>

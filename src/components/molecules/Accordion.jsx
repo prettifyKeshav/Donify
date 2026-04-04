@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import Button from '../atoms/Button'
+import Image from 'next/image'
 
 const AccordionItem = ({ item, isOpen, onToggle }) => {
   const contentRef = useRef(null)
@@ -31,6 +32,11 @@ const AccordionItem = ({ item, isOpen, onToggle }) => {
       >
         <p>{item.paragraph}</p>
         {item.isButtonVisible ? (<Button className="btn gradient-btn" href="/Become a Donner Popup">Become a Donor</Button>) : null}
+        {item.isImageVisible ? (
+          <figure>
+            <Image src={item.imageSrc} height={429} width={643} alt="ico"></Image>
+          </figure>
+        ) : null}
       </div>
     </div>
   )

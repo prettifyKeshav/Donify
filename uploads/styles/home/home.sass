@@ -179,6 +179,7 @@
             .swiper-pagination
                 width: 65%
                 position: relative
+                z-index: 1
                 .swiper-pagination-progressbar-fill
                     background: $white
             .swiper-nav
@@ -230,6 +231,15 @@
         background: linear-gradient(360deg, #FAEFE9 0%, rgba(243, 110, 42, 0.96) 100%)
         z-index: 1
     .banner
+        @include media(2000)
+            height: 90vh
+            overflow: hidden
+        @include media(1600)
+            height: 100vh
+            overflow: hidden
+        @include media(1400)
+            height: 115vh
+            overflow: hidden
         video
             height: 100%
             width: 100%

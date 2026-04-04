@@ -1,5 +1,6 @@
 @import '../_var'
 
+
 .fundraiser-listing-banner
     margin-top: var(--headerheight)
     .banner
@@ -18,7 +19,7 @@
             width: 100%
             object-fit: cover
         .banner-wrapper
-            bottom: 45%
+            bottom: 25%
             h1
                 color: $white
                 margin-bottom: 10px
@@ -27,6 +28,51 @@
                 font-weight: 400
                 font-size: 16px
                 line-height: 1.1
+            .search-bar
+                width: 747px
+                height: 66px
+                border-radius: 10px
+                background: #FFFFFFCC
+                margin-top: 30px
+                padding: 15px
+                display: flex
+                justify-content: space-between
+                align-items: center
+                form   
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    width: 100%
+                    select
+                        background: $gray
+                        width: 300px
+                    .search-input
+                        border: none
+                        padding: 6px 16px
+                        width: 318px
+                        height: 40px
+                        angle: 0 deg
+                        opacity: 1
+                        border-radius: 10px
+
+                    .search-btn
+                        border-radius: 10px
+                        padding: 6px 16px
+                        background: $primary
+                        border: 1px solid $primary
+                        color: $white
+                        gap: 10px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        transition: 0.5s ease
+                        &:hover
+                            background: $white
+                            color: $primary
+
+
+
+                
 
 .fundraiser-listing-section
     .tab-nav
@@ -340,6 +386,8 @@
     h2
         text-align: center
         margin-bottom: 30px
+    .swiper
+        padding: 0px 5px
 
 .donation-card
     display: flex

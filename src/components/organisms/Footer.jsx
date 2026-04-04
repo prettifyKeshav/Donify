@@ -54,7 +54,7 @@ const Footer = () => {
               <div className="col-md">
                 <h6>Start a Fundraiser for</h6>
                 <ul>
-                  <li><Link href="/">NGO</Link></li>
+                  <li><Link href="/ngo-listing">NGO</Link></li>
                 </ul>
               </div>
 

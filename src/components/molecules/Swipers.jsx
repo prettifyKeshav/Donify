@@ -11,6 +11,8 @@ import FundraisersCard from "./FundraisersCard";
 import PartnersCard from "./PartnersCard";
 import JourneysCard from "./JourneysCard";
 import BlogsCard from "./BlogsCard";
+import NgoCard from "./NgoCard";
+import TestimonialsCard from "../pages/NgoDetailPage/TestimonialsCard";
 
 const Swipers = ({
     className = "",
@@ -95,23 +97,25 @@ const Swipers = ({
                                     swiperSlideCard === "PartnersCard" ? <PartnersCard  {...item} /> :
                                         swiperSlideCard === "JourneysCard" ? <JourneysCard  {...item} /> :
                                             swiperSlideCard === "BlogsCard" ? <BlogsCard  {...item} /> :
-                                                <>
-                                                    <figure>
-                                                        <Image
-                                                            src={item.figureImageSrc}
-                                                            width={imageWidth}
-                                                            height={imageHeight}
-                                                            alt="figure image"
-                                                        />
-                                                    </figure>
+                                                swiperSlideCard === "NgoCard" ? <NgoCard  {...item} /> :
+                                                    swiperSlideCard === "TestimonialsCard" ? <TestimonialsCard  {...item} /> :
+                                                        <>
+                                                            <figure>
+                                                                <Image
+                                                                    src={item.figureImageSrc}
+                                                                    width={imageWidth}
+                                                                    height={imageHeight}
+                                                                    alt="figure image"
+                                                                />
+                                                            </figure>
 
-                                                    {(item.heading || item.description) && (
-                                                        <figcaption>
-                                                            {item.heading && <h4>{item.heading}</h4>}
-                                                            {item.description && <p>{item.description}</p>}
-                                                        </figcaption>
-                                                    )}
-                                                </>
+                                                            {(item.heading || item.description) && (
+                                                                <figcaption>
+                                                                    {item.heading && <h4>{item.heading}</h4>}
+                                                                    {item.description && <p>{item.description}</p>}
+                                                                </figcaption>
+                                                            )}
+                                                        </>
                             }
                         </SwiperSlide>
                     ))}

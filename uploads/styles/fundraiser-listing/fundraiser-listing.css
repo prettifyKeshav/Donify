@@ -34,7 +34,7 @@
      object-fit: cover;
 }
 .fundraiser-listing-banner .banner .banner-wrapper {
-  bottom: 45%;
+  bottom: 25%;
 }
 .fundraiser-listing-banner .banner .banner-wrapper h1 {
   color: var(--white);
@@ -45,6 +45,52 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.1;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar {
+  width: 747px;
+  height: 66px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 30px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form select {
+  background: var(--gray);
+  width: 300px;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .search-input {
+  border: none;
+  padding: 6px 16px;
+  width: 318px;
+  height: 40px;
+  angle: 0 deg;
+  opacity: 1;
+  border-radius: 10px;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .search-btn {
+  border-radius: 10px;
+  padding: 6px 16px;
+  background: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--white);
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s ease;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .search-btn:hover {
+  background: var(--white);
+  color: var(--primary);
 }
 
 .fundraiser-listing-section .tab-nav {
@@ -406,6 +452,9 @@
 .similar-fundraisers h2 {
   text-align: center;
   margin-bottom: 30px;
+}
+.similar-fundraisers .swiper {
+  padding: 0px 5px;
 }
 
 .donation-card {

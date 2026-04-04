@@ -231,6 +231,7 @@
 .home-secC .flex-box .custom-pagination .swiper-pagination {
   width: 65%;
   position: relative;
+  z-index: 1;
 }
 .home-secC .flex-box .custom-pagination .swiper-pagination .swiper-pagination-progressbar-fill {
   background: var(--white);
@@ -301,6 +302,24 @@
   inset: 0;
   background: linear-gradient(360deg, #FAEFE9 0%, rgba(243, 110, 42, 0.96) 100%);
   z-index: 1;
+}
+@media only screen and (max-width: 2000px) {
+  .home-secD .banner {
+    height: 90vh;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .home-secD .banner {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .home-secD .banner {
+    height: 115vh;
+    overflow: hidden;
+  }
 }
 .home-secD .banner video {
   height: 100%;

@@ -120,191 +120,190 @@
   padding: 10px 0 60px;
 }
 
-.fundraiser-detail {
+.ngo-detail-secA {
   margin-top: var(--headerheight);
-  padding: 50px 0;
+  padding: 50px 0 0 0;
 }
-.fundraiser-detail .flex-box {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-.fundraiser-detail .flex-box .left-col {
-  max-width: 65%;
-  width: 100%;
-}
-.fundraiser-detail .flex-box .left-col .fundraiser-detail-figure .swiper-nav {
-  max-width: 90%;
-}
-.fundraiser-detail .flex-box .left-col .fundraiser-detail-figure figure {
-  width: 100%;
-  height: 462px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.fundraiser-detail .flex-box .left-col .fundraiser-detail-figure figure img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.fundraiser-detail .flex-box .left-col .card-tags {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-.fundraiser-detail .flex-box .left-col .card-tags span:nth-child(1) {
-  background: #459A0F;
-  color: var(--white);
-  border-radius: 25px;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 5px 15px;
-}
-.fundraiser-detail .flex-box .left-col .card-tags span:nth-child(1) span {
-  padding: 0 6px 0 0;
-}
-.fundraiser-detail .flex-box .left-col .card-tags span:nth-child(2) {
-  padding: 5px 15px;
-  background: #1AF2F2;
-  border-radius: 25px;
-  font-weight: 500;
-  font-size: 14px;
-}
-.fundraiser-detail .flex-box .left-col .card-tags span:nth-child(3) {
-  padding: 5px 15px;
-  background: #EDEDED;
-  border-radius: 25px;
-  font-weight: 500;
-  font-size: 14px;
-}
-.fundraiser-detail .flex-box .left-col h1 {
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 1.2;
-  max-width: 720px;
-  margin-bottom: 30px;
-}
-.fundraiser-detail .flex-box .left-col h2 {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 24px;
-  color: var(--black);
-  margin: 20px 0 7px;
-}
-.fundraiser-detail .flex-box .left-col h3 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--black);
-  margin: 10px 0;
-}
-.fundraiser-detail .flex-box .left-col p {
-  font-weight: 400;
-  color: var(--text);
-  font-size: 16px;
-}
-.fundraiser-detail .flex-box .left-col ul {
-  margin: 10px 0;
-}
-.fundraiser-detail .flex-box .left-col ul li {
-  font-weight: 400;
-  color: var(--text);
-  font-size: 16px;
-  margin-left: 30px;
-  list-style-type: disc;
-}
-.fundraiser-detail .flex-box .left-col .figure {
-  width: 100%;
-  height: 462px;
-  border-radius: 10px;
-  overflow: hidden;
-  line-height: 0;
-  margin: 30px 0;
-}
-.fundraiser-detail .flex-box .left-col .figure img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.fundraiser-detail .flex-box .left-col .organizer-card {
-  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 15px;
-  padding: 30px;
-}
-.fundraiser-detail .flex-box .left-col .organizer-card .flex-box {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.fundraiser-detail .flex-box .left-col .organizer-card .flex-box .lef {
+.ngo-detail-secA .flex-box {
   display: flex;
   align-items: center;
-  gap: 20px;
-}
-.fundraiser-detail .flex-box .left-col .organizer-card .flex-box .lef figure {
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.fundraiser-detail .flex-box .left-col .organizer-card .flex-box .lef figure img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.fundraiser-detail .flex-box .left-col .organizer-card .flex-box .lef figcaption h5 {
-  font-weight: 600;
-  color: var(--black);
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-.fundraiser-detail .flex-box .left-col .organizer-card .flex-box .lef figcaption p {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-}
-.fundraiser-detail .flex-box .left-col .organizer-card .flex-box a {
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
   height: -moz-fit-content;
   height: fit-content;
-}
-.fundraiser-detail .flex-box .left-col .donate-via-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 15px;
-}
-.fundraiser-detail .flex-box .left-col .donate-via-grid .col {
-  width: 100%;
   border-radius: 10px;
-  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  padding: 30px;
+  gap: 50px;
 }
-.fundraiser-detail .flex-box .left-col .donate-via-grid .col figure {
-  width: 48px;
-  height: 48px;
-  line-height: 0;
+.ngo-detail-secA .flex-box .col:nth-child(1) figure {
+  width: 146px;
+  height: 146px;
 }
-.fundraiser-detail .flex-box .left-col .donate-via-grid .col figure img {
+.ngo-detail-secA .flex-box .col:nth-child(1) figure img {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.fundraiser-detail .flex-box .left-col .donate-via-grid .col h6 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.2;
-  color: #000000;
+.ngo-detail-secA .flex-box .col:nth-child(2) h1 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38.77px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
 }
-.fundraiser-detail .flex-box .right-col {
+.ngo-detail-secA .flex-box .col:nth-child(2) h1 span {
+  line-height: 0;
+}
+.ngo-detail-secA .flex-box .col:nth-child(2) p {
+  font-weight: 400;
+  color: var(--text);
+  font-size: 16px;
+}
+.ngo-detail-secA .flex-box .col:nth-child(2) .inside-flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+.ngo-detail-secA .flex-box .col:nth-child(2) .inside-flex span {
+  padding: 5px 20px;
+  border-radius: 25px;
+  background: #EDEDED;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 14px;
+}
+.ngo-detail-secA .flex-box .col:nth-child(3) {
+  display: flex;
+  gap: 20px;
+}
+.ngo-detail-secA .flex-box .col:nth-child(3) .inside-flex {
+  width: 190px;
+  height: 129px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(141, 178, 225, 0.1019607843);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.ngo-detail-secA .flex-box .col:nth-child(3) .inside-flex p {
+  font-weight: 400;
+  color: var(--text);
+  font-size: 16px;
+}
+.ngo-detail-secA .flex-box .col:nth-child(3) .inside-flex h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--secondary);
+}
+
+.ngo-detail-secB {
+  padding: 50px 0;
+}
+.ngo-detail-secB .flex-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.ngo-detail-secB .left-col {
+  max-width: 65%;
+  width: 100%;
+}
+.ngo-detail-secB .left-col h2 {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--black);
+  margin: 20px 0;
+}
+.ngo-detail-secB .left-col .What-we-do .flex {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 15px;
+}
+.ngo-detail-secB .left-col .What-we-do .flex .flex-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.ngo-detail-secB .left-col .our-fundraisers {
+  margin-top: 40px;
+}
+.ngo-detail-secB .left-col .our-fundraisers .custom-pagination .swiper-nav {
+  justify-content: start;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  top: -60px;
+  right: 0;
+}
+.ngo-detail-secB .left-col .how-we-utilise-funds {
+  margin-top: 30px;
+}
+.ngo-detail-secB .left-col .gallery {
+  margin-top: 30px;
+}
+.ngo-detail-secB .left-col .testimonials {
+  margin-top: 40px;
+}
+.ngo-detail-secB .left-col .testimonials .swiper-pagination-progressbar {
+  position: relative;
+  height: 3px;
+  background: #D0D0D0;
+}
+.ngo-detail-secB .left-col .testimonials .swiper-pagination-progressbar-fill {
+  background: var(--secondary) !important;
+}
+.ngo-detail-secB .left-col .testimonials .custom-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  margin: 30px 0 0 0;
+}
+.ngo-detail-secB .left-col .testimonials .custom-pagination .swiper-pagination {
+  width: 84%;
+  position: relative;
+  z-index: 1;
+}
+.ngo-detail-secB .left-col .testimonials .custom-pagination .swiper-pagination .swiper-pagination-progressbar-fill {
+  background: var(--white);
+}
+.ngo-detail-secB .left-col .testimonials .custom-pagination .swiper-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  top: 9%;
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-direction: row;
+  margin: 0;
+  width: 12%;
+}
+@media only screen and (max-width: 1024px) {
+  .ngo-detail-secB .left-col .testimonials .custom-pagination .swiper-nav {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .ngo-detail-secB .left-col .testimonials .custom-pagination .swiper-nav {
+    top: 6%;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .ngo-detail-secB .left-col .testimonials .custom-pagination .swiper-nav {
+    display: none;
+  }
+}
+.ngo-detail-secB .right-col {
   max-width: 35%;
   width: 100%;
   height: -moz-fit-content;
@@ -315,140 +314,64 @@
   top: calc(var(--headerheight) + 20px);
   padding: 20px;
 }
-.fundraiser-detail .flex-box .right-col .funding {
+.ngo-detail-secB .right-col .funding {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
 }
-.fundraiser-detail .flex-box .right-col .funding h5 {
+.ngo-detail-secB .right-col .funding h5 {
   font-weight: 600;
   color: var(--primary);
   font-size: 20px;
   line-height: 18px;
 }
-.fundraiser-detail .flex-box .right-col .funding p {
+.ngo-detail-secB .right-col .funding p {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   color: var(--text);
 }
-.fundraiser-detail .flex-box .right-col .progress-bar {
+.ngo-detail-secB .right-col .progress-bar {
   background: #D9D9D9;
   width: 100%;
   height: 7;
   border-radius: 25px;
   overflow: hidden;
 }
-.fundraiser-detail .flex-box .right-col .progress-bar .progress-fill {
+.ngo-detail-secB .right-col .progress-bar .progress-fill {
   height: 100%;
   background: #459A0F;
   transition: 1s ease;
 }
-.fundraiser-detail .flex-box .right-col .btn-group-one {
+.ngo-detail-secB .right-col .btn-group-one {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   gap: 10px;
   margin: 20px auto 10px;
 }
-.fundraiser-detail .flex-box .right-col .btn-group-one a {
+.ngo-detail-secB .right-col .btn-group-one a {
   width: 100%;
   text-align: center;
 }
-.fundraiser-detail .flex-box .right-col .bottom-btn-flex {
+.ngo-detail-secB .right-col .bottom-btn-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
-.fundraiser-detail .flex-box .right-col .bottom-btn-flex a {
+.ngo-detail-secB .right-col .bottom-btn-flex a {
   flex: 50%;
   text-align: center;
 }
 
-.faq-sec {
-  padding: 50px 0;
-  background: #F8ECE6;
-  position: relative;
-}
-.faq-sec .vector-img {
-  width: 373px;
-  height: 346px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
-}
-.faq-sec .flex-box {
-  position: relative;
-}
-.faq-sec .flex-box .col:first-child h2 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.1;
-  margin: 0 0 30px 0;
-  max-width: 427px;
-}
-.faq-sec .flex-box .col:last-child {
-  flex: 1;
-  max-width: 60%;
-  margin-left: auto;
-}
-
-.similar-fundraisers {
+.similar-ngos {
   padding: 50px 0;
 }
-.similar-fundraisers h2 {
+.similar-ngos h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
-
-.donation-card {
-  display: flex;
-  gap: 15px;
-  padding: 10px 0 15px 0;
-}
-.donation-card figure {
-  height: 42px;
-  width: 42px;
-  border-radius: 50%;
-  overflow: hidden;
-  line-height: 0;
-}
-.donation-card figure img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.donation-card figcaption {
-  flex: 1;
-}
-.donation-card figcaption h3 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1;
-  color: var(--text);
-  margin-bottom: 4px;
-}
-.donation-card figcaption .flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.donation-card figcaption .flex p {
-  font-weight: 500;
-  line-height: 1;
-  color: var(--black);
-  font-size: 16px;
-}
-.donation-card figcaption .flex span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 15px;
-  border-radius: 25px;
-  background: #F5F5F5;
-  font-weight: 400;
-  font-size: 12px;
+.similar-ngos .swiper {
+  padding: 30px 5px;
 }/*# sourceMappingURL=ngo-listing.css.map */

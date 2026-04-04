@@ -14,6 +14,7 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
+            detailHref: "/ngo-detail"
         },
         {
             CardImg: "/assets/images/NGO/icon/2.png",
@@ -21,6 +22,7 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
+            detailHref: "/ngo-detail"
         },
         {
             CardImg: "/assets/images/NGO/icon/3.png",
@@ -28,6 +30,7 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
+            detailHref: "/ngo-detail"
         },
         {
             CardImg: "/assets/images/NGO/icon/4.png",
@@ -35,6 +38,7 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
+            detailHref: "/ngo-detail"
         },
         {
             CardImg: "/assets/images/NGO/icon/5.png",
@@ -42,6 +46,7 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
+            detailHref: "/ngo-detail"
         },
         {
             CardImg: "/assets/images/NGO/icon/1.png",
@@ -49,6 +54,7 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
+            detailHref: "/ngo-detail"
         }
     ];
 

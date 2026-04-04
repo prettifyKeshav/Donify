@@ -9,6 +9,7 @@ const NgoCard = (
         location,
         fundsRaised,
         donations,
+        detailHref
     }
 ) => {
     return (
@@ -46,7 +47,7 @@ const NgoCard = (
 
                     <div className="btn-group">
                         <Button className='btn primary-btn' href=''>Donate Now</Button>
-                        <Button className='btn secondary-border' href=''>Know More</Button>
+                        <Button className='btn secondary-border' href={detailHref}>Know More</Button>
                     </div>
                 </figcaption>
             </div>
