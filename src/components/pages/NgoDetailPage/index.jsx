@@ -1,4 +1,6 @@
-import React from 'react'
+"use client"
+
+import { useEffect, useRef } from "react";
 import Image from 'next/image'
 import "@/uploads/styles/ngo-listing/ngo-listing.css"
 import DonationCard from '../FundraiserDetailPage/DonationCard'
@@ -7,7 +9,25 @@ import Swipers from '../../molecules/Swipers'
 import Accordion from '../../molecules/Accordion'
 import SimilarNgos from './SimilarNgos'
 
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import { Fancybox } from "@fancyapps/ui";
+
 const NgoDetailPage = () => {
+    const galleryRef = useRef(null);
+
+    useEffect(() => {
+        if (!galleryRef.current) return;
+
+        Fancybox.bind(galleryRef.current, "[data-fancybox='ngo-gallery']", {
+            Thumbs: false,
+            Toolbar: true,
+        });
+
+        return () => {
+            Fancybox.unbind(galleryRef.current);
+            Fancybox.close();
+        };
+    }, []);
 
     const cards = [
         {
@@ -119,6 +139,40 @@ const NgoDetailPage = () => {
         }
     ];
 
+
+    const GallerySwiperData = [
+        {
+            figureImageSrc: "/assets/images/gallery/1.jpg",
+            imageWidth: "366",
+            imageHeight: "244",
+        },
+        {
+            figureImageSrc: "/assets/images/gallery/2.jpg",
+            imageWidth: "366",
+            imageHeight: "244",
+        },
+        {
+            figureImageSrc: "/assets/images/monthlydoner/detailpage/Contribution/1.jpg",
+            imageWidth: "366",
+            imageHeight: "244",
+        },
+        {
+            figureImageSrc: "/assets/images/monthlydoner/detailpage/Contribution/2.jpg",
+            imageWidth: "366",
+            imageHeight: "244",
+        },
+        {
+            figureImageSrc: "/assets/images/monthlydoner/detailpage/Contribution/1.jpg",
+            imageWidth: "366",
+            imageHeight: "244",
+        },
+        {
+            figureImageSrc: "/assets/images/monthlydoner/detailpage/Contribution/2.jpg",
+            imageWidth: "366",
+            imageHeight: "244",
+        }
+    ];
+
     return (
         <>
             <section>
@@ -209,11 +263,25 @@ const NgoDetailPage = () => {
                                     />
                                 </div>
 
-                                <div className="gallery">
+                                <div className="gallery" ref={galleryRef}>
                                     <h2>Gallery</h2>
 
                                     <Swipers
-
+                                        className="gallery-swiper"
+                                        imageWidth={366}
+                                        imageHeight={244}
+                                        slidesPerView={2}
+                                        spaceBetween={20}
+                                        speed={1000}
+                                        navigation={true}
+                                        autoplay={false}
+                                        loop={false}
+                                        pagination={false}
+                                        data={GallerySwiperData}
+                                        enableFancybox={true}
+                                        fancyboxGroup="ngo-gallery"
+                                        swiperNavBtn="white-btn-secondary-border"
+                                        swiperNavClass="swiper-nav"
                                     />
                                 </div>
 
@@ -241,8 +309,8 @@ const NgoDetailPage = () => {
 
                             <div className="right-col">
                                 <div className="btn-group-one">
-                                    <Button className='btn primary-btn' href="/fundraiser-detail">Donate Now</Button>
-                                    <Button className='btn gray-border' href="/fundraiser-detail">Share</Button>
+                                    <Button className='btn primary-btn' href="/">Donate Now</Button>
+                                    <Button className='btn gray-border' href="/">Share</Button>
                                 </div>
 
                                 <DonationCard

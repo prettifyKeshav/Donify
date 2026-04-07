@@ -19,7 +19,7 @@ const Header = () => {
 
                     <ul>
                         <li>
-                            <Button className="btn secondary-border " href="/">
+                            <Button className="btn secondary-border " href="/ngo-landing" target="_blank">
                                 Enroll your NGO
                             </Button>
                         </li>

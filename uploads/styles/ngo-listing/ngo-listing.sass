@@ -207,7 +207,44 @@
             margin-top: 30px
 
         .gallery
-            margin-top: 30px
+            margin-top: 50px
+            position: relative
+            .gallery-swiper
+                max-width: 850px
+                .swiper-slide
+                    figure
+                        height: 244px
+                        border-radius: 10px
+                        overflow: hidden
+                        line-height: 0
+                        margin-bottom: 20px
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: cover
+            .custom-pagination
+                position: absolute
+                top: -60px
+                right: 0
+                .swiper-nav
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    gap: 20px
+                    position: relative
+                    top: 9%
+                    width: fit-content
+                    flex-direction: row
+                    margin: 0
+                    width: 100%
+                    @include media(1024)
+                        width: 35%
+                    @include media(991) 
+                        top: 6%
+                        width: 40%
+                    @include media(540)
+                        display: none
+
 
         .testimonials
             margin-top: 40px

@@ -246,7 +246,58 @@
   margin-top: 30px;
 }
 .ngo-detail-secB .left-col .gallery {
-  margin-top: 30px;
+  margin-top: 50px;
+  position: relative;
+}
+.ngo-detail-secB .left-col .gallery .gallery-swiper {
+  max-width: 850px;
+}
+.ngo-detail-secB .left-col .gallery .gallery-swiper .swiper-slide figure {
+  height: 244px;
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+  margin-bottom: 20px;
+}
+.ngo-detail-secB .left-col .gallery .gallery-swiper .swiper-slide figure img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.ngo-detail-secB .left-col .gallery .custom-pagination {
+  position: absolute;
+  top: -60px;
+  right: 0;
+}
+.ngo-detail-secB .left-col .gallery .custom-pagination .swiper-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  top: 9%;
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-direction: row;
+  margin: 0;
+  width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .ngo-detail-secB .left-col .gallery .custom-pagination .swiper-nav {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .ngo-detail-secB .left-col .gallery .custom-pagination .swiper-nav {
+    top: 6%;
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 540px) {
+  .ngo-detail-secB .left-col .gallery .custom-pagination .swiper-nav {
+    display: none;
+  }
 }
 .ngo-detail-secB .left-col .testimonials {
   margin-top: 40px;

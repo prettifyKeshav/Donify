@@ -7,43 +7,53 @@ const NGOs = () => {
     const swiperContent = [
         {
             figureImageSrc: "/assets/images/NGO/icon/1.png",
-            heading: "Vimukti Sanstha"
+            heading: "Vimukti Sanstha",
+            cardHref: "/ngo-detail"
         },
         {
             figureImageSrc: "/assets/images/NGO/icon/2.png",
-            heading: "Snehalaya"
+            heading: "Snehalaya",
+            cardHref: "/ngo-detail"
         },
         {
             figureImageSrc: "/assets/images/NGO/icon/3.png",
-            heading: "Snehalaya"
+            heading: "Snehalaya",
+            cardHref: "/ngo-detail"
         },
         {
             figureImageSrc: "/assets/images/NGO/icon/4.png",
-            heading: "Christel House India"
+            heading: "Christel House India",
+            cardHref: "/ngo-detail"
         },
         {
             figureImageSrc: "/assets/images/NGO/icon/5.png",
-            heading: "Unique Welfare Foundation "
+            heading: "Unique Welfare Foundation ",
+            cardHref: "/ngo-detail"
         },
         {
             figureImageSrc: "/assets/images/NGO/icon/1.png",
-            heading: "Vimukti Sanstha"
+            heading: "Vimukti Sanstha",
+            cardHref: "/ngo-detail"
         },
         {
             figureImageSrc: "/assets/images/NGO/icon/2.png",
-            heading: "Snehalaya"
+            heading: "Snehalaya",
+            cardHref: "/ngo-detail"
         },
         {
             figureImageSrc: "/assets/images/NGO/icon/3.png",
-            heading: "Snehalaya"
+            heading: "Snehalaya",
+            cardHref: "/ngo-detail"
         },
         {
             figureImageSrc: "/assets/images/NGO/icon/4.png",
-            heading: "Christel House India"
+            heading: "Christel House India",
+            cardHref: "/ngo-detail"
         },
         {
             figureImageSrc: "/assets/images/NGO/icon/5.png",
-            heading: "Unique Welfare Foundation "
+            heading: "Unique Welfare Foundation ",
+            cardHref: "/ngo-detail"
         },
     ]
 
@@ -65,7 +75,7 @@ const NGOs = () => {
                                     <p>Supporting credible nonprofits for 10+ years and counting</p>
                                 </div>
 
-                                <Swipers
+                                {/* <Swipers
                                     className="ngo-swiper"
                                     autoplay={false}
                                     loop={false}
@@ -77,6 +87,22 @@ const NGOs = () => {
                                     speed={700}
                                     navigation={true}
                                     pagination={true}
+                                /> */}
+
+                                <Swipers
+                                    className="ngo-swiper"
+                                    swiperSlideCard="NgoHomeCard"
+                                    autoplay={false}
+                                    loop={false}
+                                    imageWidth={167}
+                                    imageHeight={194}
+                                    slidesPerView={6}
+                                    spaceBetween={30}
+                                    speed={700}
+                                    // navigation={cards.length > 3}
+                                    navigation={true}
+                                    pagination={true}
+                                    data={swiperContent}
                                 />
 
                             </div>

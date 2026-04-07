@@ -22,7 +22,7 @@ const TrendingFundraisers = () => {
             taxBenefit: true,
             CardBtnText: "Donate Now",
             donorsNumber: "453",
-            detailLink: "/",
+            detailLink: "/fundraiser-detail",
         },
         {
             CardImg: "/assets/images/fundraisers-card/2.jpg",
@@ -38,7 +38,7 @@ const TrendingFundraisers = () => {
             taxBenefit: true,
             CardBtnText: "Donate Now",
             donorsNumber: "312",
-            detailLink: "/",
+            detailLink: "/fundraiser-detail",
         },
         {
             CardImg: "/assets/images/fundraisers-card/3.png",
@@ -54,7 +54,7 @@ const TrendingFundraisers = () => {
             taxBenefit: true,
             CardBtnText: "Donate Now",
             donorsNumber: "198",
-            detailLink: "/",
+            detailLink: "/fundraiser-detail",
         },
         {
             CardImg: "/assets/images/fundraisers-card/1.jpg",
@@ -70,7 +70,7 @@ const TrendingFundraisers = () => {
             taxBenefit: true,
             CardBtnText: "Donate Now",
             donorsNumber: "521",
-            detailLink: "/",
+            detailLink: "/fundraiser-detail",
         },
         {
             CardImg: "/assets/images/fundraisers-card/2.jpg",
@@ -86,7 +86,7 @@ const TrendingFundraisers = () => {
             taxBenefit: true,
             CardBtnText: "Donate Now",
             donorsNumber: "267",
-            detailLink: "/",
+            detailLink: "/fundraiser-detail",
         }
     ];
 

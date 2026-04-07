@@ -428,31 +428,6 @@
 .home-secF .banner .banner-wrapper .ngo-swiper .swiper-wrapper {
   padding: 40px 0;
 }
-.home-secF .banner .banner-wrapper .ngo-swiper .swiper-wrapper .swiper-slide {
-  background: var(--white);
-  border-radius: 10px;
-  overflow: hidden;
-  height: 194px;
-  padding: 30px 20px;
-}
-.home-secF .banner .banner-wrapper .ngo-swiper .swiper-wrapper .swiper-slide figure {
-  width: 88px;
-  height: 88px;
-  margin: 0 auto 20px;
-}
-.home-secF .banner .banner-wrapper .ngo-swiper .swiper-wrapper .swiper-slide figure img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.home-secF .banner .banner-wrapper .ngo-swiper .swiper-wrapper .swiper-slide figcaption h4 {
-  font-weight: 500;
-  line-height: 1.1;
-  font-size: 16px;
-  color: var(--text);
-  text-align: center;
-}
 .home-secF .banner .banner-wrapper .custom-pagination {
   display: flex;
   justify-content: center;
