@@ -4,9 +4,10 @@ const Button = ({
     children,
     className = "",
     href = "#",
+    isTargetBlank = false
 }) => {
     return (
-        <Link href={href} className={className}>
+        <Link href={href} className={className} target={isTargetBlank ? "_blank" : "_self"}>
             {children}
         </Link>
     );

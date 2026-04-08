@@ -5,7 +5,7 @@ const MainTemplates = ({ children }) => {
     return (
         <>
             <Header />
-            <main>{children}</main>
+            {children}
             <Footer />
         </>
     )

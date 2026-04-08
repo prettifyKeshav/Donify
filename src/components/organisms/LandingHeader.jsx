@@ -16,34 +16,23 @@ const Header = () => {
                     </Link>
                 </div>
                 <div className="colB">
-
                     <ul>
                         <li>
-                            <Button className="btn secondary-border " href="/ngo-landing" isTargetBlank>
-                                Enroll your NGO
-                            </Button>
+                            <Link href="/" className="slideto">How it Works</Link>
+                        </li>
+                        <li>
+                            <Link href="/" className="slideto">NGO Network</Link>
+                        </li>
+                        <li>
+                            <Link href="/" className="slideto">Testimonials</Link>
+                        </li>
+                        <li>
+                            <Link href="/" className="slideto">FAQs</Link>
                         </li>
                         <li>
                             <Button className="btn primary-btn " href="/">
-                                Donate Now
+                                Enroll your NGO on Donify
                             </Button>
-                        </li>
-                        <li>
-                            <Button className="btn gradient-btn " href="/monthly-donor-listing">
-                                Donate Monthly
-                            </Button>
-                        </li>
-
-                        <li>
-                            <Link href="/" className="login">Login/ Join Us</Link>
-                        </li>
-
-                        <li className="ham-parent">
-                            <button type="button" className="ham-btn">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </button>
                         </li>
                     </ul>
                 </div>

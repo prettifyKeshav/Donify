@@ -2466,6 +2466,13 @@ header .header-wrapper .colB ul li a {
 header .header-wrapper .colB ul li a.login {
   color: var(--secondary);
 }
+header .header-wrapper .colB ul li .slideto {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  color: #173254;
+  margin-right: 30px;
+}
 header .header-wrapper .colB ul .ham-parent {
   display: flex;
 }

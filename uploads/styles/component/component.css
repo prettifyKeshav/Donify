@@ -496,7 +496,10 @@
   line-height: 1.3;
 }
 .ngo-testimonials-card .bottom {
-  margin-top: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 0 30px 30px;
 }
 .ngo-testimonials-card .bottom h4 {
   font-weight: 500;

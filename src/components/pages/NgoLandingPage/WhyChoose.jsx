@@ -22,7 +22,7 @@ const WhyChoose = () => {
         {
             figureImage: "/assets/images/NGO-Landing/why-chose-ico/4.svg",
             heading: "Easy Campaign Setup",
-            description: "Create and launch fundraising campaigns بسهولة with simple steps, allowing you to focus more on your mission and impact.",
+            description: "Create and launch fundraising campaigns with simple steps, allowing you to focus more on your mission and impact.",
         }
     ]
 

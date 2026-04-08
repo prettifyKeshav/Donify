@@ -5,7 +5,7 @@ const NgoTestimonials = () => {
 
     const cards = [
         {
-            ngoImage: "/assets/images/NGO/icon/2.png",
+            ngoImage: "/assets/images/NGO/icon/1.png",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
             ngoName: "Snehalaya",
             ngoLocation: "Gurugram"
@@ -17,19 +17,19 @@ const NgoTestimonials = () => {
             ngoLocation: "Gurugram"
         },
         {
-            ngoImage: "/assets/images/NGO/icon/2.png",
+            ngoImage: "/assets/images/NGO/icon/3.png",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
             ngoName: "Snehalaya",
             ngoLocation: "Gurugram"
         },
         {
-            ngoImage: "/assets/images/NGO/icon/2.png",
+            ngoImage: "/assets/images/NGO/icon/4.png",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
             ngoName: "Snehalaya",
             ngoLocation: "Gurugram"
         },
         {
-            ngoImage: "/assets/images/NGO/icon/2.png",
+            ngoImage: "/assets/images/NGO/icon/5.png",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.",
             ngoName: "Snehalaya",
             ngoLocation: "Gurugram"
