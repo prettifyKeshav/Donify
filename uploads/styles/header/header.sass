@@ -298,229 +298,6 @@ footer
                     &:hover
                         color: $primary
 
-.ham-pop
-    right: 0
-    max-width: 480px
-    transform: translateX(100%)
-    transition: .5s ease
-    background-color: #fff
-    &::before
-        content: ""
-        position: absolute
-        bottom: 0%
-        right: 0%
-        width: 250px
-        height: 388px
-        // background: url(../../../assets/images/Vectors/vector.png) no-repeat
-        z-index: 1
-        transform: scaleY(-1) scaleX(-1)
-        background-size: contain
-        opacity: 0.4
-    &.is-open
-        transform: translateX(0%)
-    .close
-        path
-            stroke: $white
-            stroke-width: 2 !important
-    .model-body
-        padding: 25px 40px 30px
-        height: 100%
-        overflow-y: auto
-        display: flex
-        flex-direction: column
-
-        position: relative
-        min-height: 100%
-        top: 0px
-        background: url("/assets/images/grainy.jpg")
-        &::before
-            content: ""
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            background: linear-gradient(0deg, rgb(255 255 255 / 0%) -34.13%, rgb(255 255 255) 100%)
-        @include scrollbar(6px,$white,#5e5e5e,8px)
-        @include media(520)
-            padding: 20px 20px
-
-        .logo
-            margin-bottom: 20px
-            position: relative
-            z-index: 1
-        .ico
-            max-width: 70px
-            margin-bottom: 55px
-            line-height: 0
-            img,svg
-                width: 100%
-                height: auto
-        .nav-list
-            flex: 1
-            z-index: 1
-            >li
-                &:hover
-                    a
-                        color: $primary
-                &:not(:last-child)
-                    margin-bottom: 22px
-                    @include media(1366)
-                        margin-bottom: 20px
-                >a
-                    font-size: 25px
-                    line-height: 1.06
-                    color: #444
-                    display: inline-block
-                    transition: 0.5s ease
-                    @include font(500)
-                    @include media(675)
-                        font-size: 21px
-                    &:hover
-                        color: $primary
-                        // padding-left: 20px
-                &.hasDropdown
-                    position: relative
-                    .plu-ico
-                        position: absolute
-                        right: 0
-                        top: 0px
-                        --sizeplu: 22px
-                        height: var(--sizeplu)
-                        width: var(--sizeplu)
-                        cursor: pointer
-                        &::before,&::after
-                            content: ''
-                            position: absolute
-                            top: 50%
-                            translate: 0 -50%
-                            left: 0
-                            right: 0
-                            height: 2px
-                            width: 100%
-                            background: $black
-                            transition: .5s ease
-                        &::before
-                            transform: rotate(90deg)
-                        &.active
-                            &::before
-                                transform: rotate(0deg)
-                                opacity: 0
-                    .dropdown-menu-ham
-                        display: none
-                        border: 1px solid #ccc
-                        border-right: none
-                        border-left: none
-                        margin: 12px 0
-                        padding: 15px 0
-                        li
-                            padding-left: 10px
-                            &.hasDropdownChild
-                                position: relative
-                                .plu-ico-child
-                                    position: absolute
-                                    right: 0
-                                    top: 0px
-                                    --sizeplu: 16px
-                                    height: var(--sizeplu)
-                                    width: var(--sizeplu)
-                                    cursor: pointer
-                                    &::before,&::after
-                                        content: ''
-                                        position: absolute
-                                        top: 50%
-                                        translate: 0 -50%
-                                        left: 0
-                                        right: 0
-                                        height: 2px
-                                        width: 100%
-                                        background: $black
-                                        transition: .5s ease
-                                    &::before
-                                        transform: rotate(90deg)
-                                    &.active
-                                        &::before
-                                            transform: rotate(0deg)
-                                            opacity: 0
-                                .dropdown-menu-ham-child
-                                    display: none
-                                    border: 1px solid #ccc
-                                    border-right: none
-                                    border-left: none
-                                    margin: 12px 0
-                                    padding: 15px 0
-                                    li
-                                        padding-left: 10px
-                                        &:not(:last-child)
-                                            margin-bottom: 5px
-                                        a
-                                            color: $text
-                                            &:hover
-                                                color: $black
-                            &:not(:last-child)
-                                margin-bottom: 5px
-                            a
-                                color: #444
-                                font-size: 20px
-                                font-weight: 600
-                                @include media(540)
-                                    &:first-child
-                                        color: $text
-                                        font-size: 16px
-                                        font-weight: normal
-                                &:hover
-                                    color: $black
-
-        .bottom-list
-            border-top: 1px solid #444
-            margin-top: 2rem
-            padding-top: 1rem
-            display: flex
-            align-items: center
-            gap: 1rem
-            .social-icons
-                a
-                    display: inline-flex
-                    vertical-align: middle
-                    align-items: center
-                    justify-content: center
-                    height: 40px
-                    width: 40px
-                    border-radius: 50%
-                    line-height: 0
-                    overflow: hidden
-                    @include before($gradient-a)
-                    color: $black
-                    &::before
-                        border-radius: 50%
-                        transform: scale(1.5)
-                        z-index: -1
-                        opacity: 0
-                        transition: .2s ease
-                    &:not(:last-child)
-                        margin-right: 4px
-                    svg
-                        width: 24px
-                        height: 24px
-                        path
-                            transition: none
-                            &[stroke],&[fill="none"]
-                                // stroke: currentColor
-                                stroke: #444
-                            &[fill]
-                                // fill: currentColor
-                        &:hover
-                            path
-                                &[fill]
-                                    fill: var(--primary)
-                                    transition: 0.4s
-                    &:hover
-                        color: $white
-                        // &::before
-                        //     transition: .5s ease
-                        //     opacity: 1
-                        //     transform: scale(1)
-
 .enquire-pop
     right: 0
     transform: translateX(100%)
@@ -804,3 +581,97 @@ footer
             margin: 0 auto 30px
             font-size: 20px
             max-width: 520px
+
+
+// MODELS =========================================>
+
+.ham-pop
+    right: 0
+    max-width: 480px
+    transform: translateX(100%)
+    background: $white
+    transition: .5s ease
+    z-index: 10
+    nav
+        flex: 1
+    &.is-open
+        transform: translateX(0%)
+    .close
+        top: 17px
+        right: 22px
+        svg
+            width: 25px
+            path
+                stroke: $black !important
+                stroke-width: 2 !important
+    .model-body
+        padding: 0px 40px 30px
+        margin-top: 80px
+        height: calc(100% - 80px)
+        overflow-y: auto
+        display: flex
+        flex-direction: column
+        position: relative
+        @include scrollbar(0px,$black,#fff,0px)
+        @include media(540)
+            padding: 0 20px 40px
+        .icon
+            display: flex
+            align-items: center
+            gap: 15px
+            margin-bottom: 30px
+            line-height: 0
+            font-weight: 600
+            letter-spacing: 4px
+            font-size: 30px
+            color: #000
+            img,svg
+                width: 70px
+                height: auto
+                path 
+                    fill: #000
+        .nav-list
+            width: 100%
+            flex: 1
+            >li
+                cursor: pointer
+                &:not(:last-child)
+                    margin-bottom: 15px
+                >a
+                    font-size: 26px
+                    line-height: 1.06
+                    color: $black
+                    display: inline-block
+                    @include font(500)
+                    &:hover
+                        color: $primary
+                        transform: translateX(15px)
+        .bottom-list
+            margin-top: 4rem
+            padding-top: 1rem
+            display: flex
+            align-items: center 
+            gap: 1rem
+            border-top: 1px solid #ccc
+            .social-icons
+                display: flex
+                gap: 3px
+                align-items: center
+                a
+                    display: inline-flex
+                    vertical-align: middle
+                    align-items: center
+                    justify-content: center
+                    height: 40px
+                    width: 40px
+                    border-radius: 50%
+                    color: #000
+                    line-height: 0
+                    overflow: hidden
+                    &:not(:last-child)
+                        margin-right: 4px
+                    img
+                        width: 24px
+                        height: 24px
+                        filter: invert(1)
+                        transition: .5s ease

@@ -5,8 +5,8 @@ import Swipers from "../../molecules/Swipers"
 import Image from 'next/image'
 
 const TrendingFundraisers = () => {
-
     const [activeTab, setActiveTab] = useState("medical")
+
     const cards = [
         {
             CardImg: "/assets/images/fundraisers-card/1.jpg",

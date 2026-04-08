@@ -18,30 +18,30 @@
 .home-secA .home-secA-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
 }
-.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide {
+.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide div {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide figure {
+.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide div figure {
   width: 69px;
   height: 64px;
   border-radius: 5px;
   overflow: hidden;
 }
-.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide figure img {
+.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide div figure img {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide figcaption h4 {
+.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide div figcaption h4 {
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
   margin-bottom: 5px;
 }
-.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide figcaption p {
+.home-secA .home-secA-swiper .swiper-wrapper .swiper-slide div figcaption p {
   font-weight: 600;
   font-size: 20px;
   line-height: 1;

@@ -2,6 +2,7 @@
 
 // import "./global.css";
 import "@/uploads/styles/header/header.css"
+import HamburgerModel from "../components/organisms/Modal/HamburgerModel";
 
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +15,6 @@ import "@/uploads/styles/header/header.css"
 export const metadata = {
   title: "Donify Connecting Communities",
   description: "India’s most trusted online donation platform",
-
 };
 
 export default function RootLayout({ children }) {
@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en" data-scroll-behavior="smooth">
       <body className="antialiased">
         {children}
+        <HamburgerModel />
       </body>
     </html>
   );

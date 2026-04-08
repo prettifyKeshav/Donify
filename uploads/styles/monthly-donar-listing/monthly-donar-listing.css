@@ -471,34 +471,34 @@
 .monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper {
   width: 735px;
 }
-.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide {
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div {
   display: flex;
   justify-content: space-between;
   gap: 30px;
 }
-.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide figure {
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div figure {
   width: 90px;
   height: 90px;
   border-radius: 5px;
   overflow: hidden;
 }
-.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide figure img {
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div figure img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide figcaption {
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div figcaption {
   flex: 1;
 }
-.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide figcaption h4 {
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div figcaption h4 {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: var(--black);
   margin-bottom: 5px;
 }
-.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide figcaption p {
+.monthly-donor-detail-secA .grid-box .col-left .natural-disasters .swiper .swiper-wrapper .swiper-slide div figcaption p {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;

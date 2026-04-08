@@ -1,10 +1,12 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import FundraisersCard from '../../molecules/FundraisersCard'
 import Swipers from '../../molecules/Swipers';
+import Image from 'next/image';
 
 const ListingCards = () => {
+    const [activeTab, setActiveTab] = useState("all");
 
     const cards = [
         {
@@ -21,7 +23,7 @@ const ListingCards = () => {
             CardBtnText: "Donate Now",
             donorsNumber: "453",
             detailLink: "/fundraiser-detail",
-            dataTab: "medical"
+            Datacategory: "medical"
         },
         {
             CardImg: "/assets/images/fundraisers-card/2.jpg",
@@ -37,7 +39,7 @@ const ListingCards = () => {
             CardBtnText: "Donate Now",
             donorsNumber: "312",
             detailLink: "/fundraiser-detail",
-            dataTab: "medical"
+            Datacategory: "medical"
         },
         {
             CardImg: "/assets/images/fundraisers-card/3.png",
@@ -53,7 +55,7 @@ const ListingCards = () => {
             CardBtnText: "Donate Now",
             donorsNumber: "198",
             detailLink: "/fundraiser-detail",
-            dataTab: "relief"
+            Datacategory: "relief"
         },
         {
             CardImg: "/assets/images/fundraisers-card/1.jpg",
@@ -69,7 +71,7 @@ const ListingCards = () => {
             CardBtnText: "Donate Now",
             donorsNumber: "521",
             detailLink: "/fundraiser-detail",
-            dataTab: "medical"
+            Datacategory: "medical"
         },
         {
             CardImg: "/assets/images/fundraisers-card/2.jpg",
@@ -85,7 +87,7 @@ const ListingCards = () => {
             CardBtnText: "Donate Now",
             donorsNumber: "267",
             detailLink: "/fundraiser-detail",
-            dataTab: "education"
+            Datacategory: "education"
         }
     ];
 
@@ -122,30 +124,32 @@ const ListingCards = () => {
         },
         {
             figureImageSrc: "/assets/images/fundraisers-card/fundraisers-tab-icon/2.svg",
-            heading: "Education",
-            dataTab: "education"
+            heading: "Poverty",
+            dataTab: "poverty"
         },
         {
             figureImageSrc: "/assets/images/fundraisers-card/fundraisers-tab-icon/3.svg",
-            heading: "Children",
-            dataTab: "children"
+            heading: "Differently Abled",
+            dataTab: "differently-abled"
         },
         {
             figureImageSrc: "/assets/images/fundraisers-card/fundraisers-tab-icon/4.svg",
-            heading: "Women",
-            dataTab: "women"
+            heading: "Disaster Relief",
+            dataTab: "disaster-relief"
         },
         {
             figureImageSrc: "/assets/images/fundraisers-card/fundraisers-tab-icon/5.svg",
-            heading: "Elderly",
-            dataTab: "elderly"
+            heading: "Environment",
+            dataTab: "environment"
         },
         {
             figureImageSrc: "/assets/images/fundraisers-card/fundraisers-tab-icon/6.svg",
-            heading: "Community",
-            dataTab: "community"
+            heading: "Arts & Culture",
+            dataTab: "arts-culture"
         },
     ];
+
+    const filteredCards = activeTab === "all" ? cards : cards.filter(card => card.Datacategory === activeTab);
 
     return (
         <>
@@ -155,6 +159,10 @@ const ListingCards = () => {
                     <div className="tab-nav">
                         <Swipers
                             className="fundraiser-listing-swiper"
+
+                            onSlideClick={(item) => setActiveTab(item.dataTab)}
+                            activeTab={activeTab}
+
                             data={TabNavCard}
                             slidesPerView={8}
                             spaceBetween={0}
@@ -170,11 +178,22 @@ const ListingCards = () => {
                         />
                     </div>
 
-                    <div className="grid-box">
-                        {cards.map((item, index) => (
-                            <FundraisersCard key={index} {...item} />
-                        ))}
-                    </div>
+
+                    {filteredCards.length > 0 ? (
+                        <div className="grid-box">
+                            {filteredCards.map((item, index) => (
+                                <FundraisersCard key={index} {...item} />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="not-found">
+                            <figure>
+                                <Image src="/assets/images/not-found.gif" width="120" height="120" alt="not found" ></Image>
+                            </figure>
+                            <p className="no-data">No fundraisers available</p>
+                        </div>
+                    )}
+                    
                 </div>
             </div>
         </>

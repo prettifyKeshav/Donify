@@ -17,6 +17,9 @@ import NgoHomeCard from "./NgoHomeCard";
 import NgoTestimonialsCard from "./NgoTestimonialsCard";
 
 const Swipers = ({
+    onSlideClick,
+    activeTab,
+
     className = "",
     spaceBetween = 0,
     slidesPerView = 1,
@@ -74,6 +77,12 @@ const Swipers = ({
 
                     preventClicks={true}
                     preventClicksPropagation={true}
+                    onSlideClick={(swiper) => {
+                        const clickedItem = data[swiper.clickedIndex];
+                        if (clickedItem) {
+                            onSlideClick?.(clickedItem);
+                        }
+                    }}
 
                     pagination={
                         pagination
@@ -140,21 +149,27 @@ const Swipers = ({
                                                                     </a>
                                                                 ) : (
                                                                     <>
-                                                                        <figure>
-                                                                            <Image
-                                                                                src={item.figureImageSrc}
-                                                                                width={imageWidth}
-                                                                                height={imageHeight}
-                                                                                alt="figure image"
-                                                                            />
-                                                                        </figure>
+                                                                        <div
+                                                                            onClick={() => onSlideClick?.(item)}
+                                                                            className={activeTab === item.dataTab ? "active" : ""}
+                                                                            style={{ cursor: "pointer" }}
+                                                                        >
+                                                                            <figure>
+                                                                                <Image
+                                                                                    src={item.figureImageSrc}
+                                                                                    width={imageWidth}
+                                                                                    height={imageHeight}
+                                                                                    alt="figure image"
+                                                                                />
+                                                                            </figure>
 
-                                                                        {(item.heading || item.description) && (
-                                                                            <figcaption>
-                                                                                {item.heading && <h4>{item.heading}</h4>}
-                                                                                {item.description && <p>{item.description}</p>}
-                                                                            </figcaption>
-                                                                        )}
+                                                                            {(item.heading || item.description) && (
+                                                                                <figcaption>
+                                                                                    {item.heading && <h4>{item.heading}</h4>}
+                                                                                    {item.description && <p>{item.description}</p>}
+                                                                                </figcaption>
+                                                                            )}
+                                                                        </div>
                                                                     </>
                                                                 )}
                         </SwiperSlide>

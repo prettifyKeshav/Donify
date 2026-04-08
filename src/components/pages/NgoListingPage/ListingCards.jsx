@@ -1,11 +1,12 @@
 "use client"
 
-import React from 'react'
-import FundraisersCard from '../../molecules/FundraisersCard'
+import React, { useState } from 'react'
 import Swipers from '../../molecules/Swipers';
 import NgoCard from '../../molecules/NgoCard';
+import Image from 'next/image';
 
 const ListingCards = () => {
+    const [activeTab, setActiveTab] = useState("all");
 
     const cards = [
         {
@@ -14,7 +15,8 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
-            detailHref: "/ngo-detail"
+            detailHref: "/ngo-detail",
+            Datacategory: "education"
         },
         {
             CardImg: "/assets/images/NGO/icon/2.png",
@@ -22,7 +24,8 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
-            detailHref: "/ngo-detail"
+            detailHref: "/ngo-detail",
+            Datacategory: "children"
         },
         {
             CardImg: "/assets/images/NGO/icon/3.png",
@@ -30,7 +33,8 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
-            detailHref: "/ngo-detail"
+            detailHref: "/ngo-detail",
+            Datacategory: "children"
         },
         {
             CardImg: "/assets/images/NGO/icon/4.png",
@@ -38,7 +42,8 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
-            detailHref: "/ngo-detail"
+            detailHref: "/ngo-detail",
+            Datacategory: "children"
         },
         {
             CardImg: "/assets/images/NGO/icon/5.png",
@@ -46,7 +51,8 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
-            detailHref: "/ngo-detail"
+            detailHref: "/ngo-detail",
+            Datacategory: "women"
         },
         {
             CardImg: "/assets/images/NGO/icon/1.png",
@@ -54,7 +60,8 @@ const ListingCards = () => {
             location: 'Gurugram',
             fundsRaised: "₹12,32,809",
             donations: "41,902",
-            detailHref: "/ngo-detail"
+            detailHref: "/ngo-detail",
+            Datacategory: "education"
         }
     ];
 
@@ -91,30 +98,35 @@ const ListingCards = () => {
         },
         {
             figureImageSrc: "/assets/images/fundraisers-card/fundraisers-tab-icon/2.svg",
-            heading: "Education",
-            dataTab: "education"
+            heading: "Poverty",
+            dataTab: "poverty"
         },
         {
             figureImageSrc: "/assets/images/fundraisers-card/fundraisers-tab-icon/3.svg",
-            heading: "Children",
-            dataTab: "children"
+            heading: "Differently Abled",
+            dataTab: "differently-abled"
         },
         {
             figureImageSrc: "/assets/images/fundraisers-card/fundraisers-tab-icon/4.svg",
-            heading: "Women",
-            dataTab: "women"
+            heading: "Disaster Relief",
+            dataTab: "disaster-relief"
         },
         {
             figureImageSrc: "/assets/images/fundraisers-card/fundraisers-tab-icon/5.svg",
-            heading: "Elderly",
-            dataTab: "elderly"
+            heading: "Environment",
+            dataTab: "environment"
         },
         {
             figureImageSrc: "/assets/images/fundraisers-card/fundraisers-tab-icon/6.svg",
-            heading: "Community",
-            dataTab: "community"
+            heading: "Arts & Culture",
+            dataTab: "arts-culture"
         },
     ];
+
+    const filteredCards = activeTab === "all"
+        ? cards
+        : cards.filter(card => card.Datacategory === activeTab);
+
 
     return (
         <>
@@ -123,6 +135,9 @@ const ListingCards = () => {
 
                     <div className="tab-nav">
                         <Swipers
+                            onSlideClick={(item) => setActiveTab(item.dataTab)}
+                            activeTab={activeTab}
+
                             className="ngo-listing-swiper"
                             data={TabNavCard}
                             slidesPerView={8}
@@ -139,11 +154,20 @@ const ListingCards = () => {
                         />
                     </div>
 
-                    <div className="grid-box">
-                        {cards.map((item, index) => (
-                            <NgoCard key={index} {...item} />
-                        ))}
-                    </div>
+                    {filteredCards.length > 0 ? (
+                        <div className="grid-box">
+                            {filteredCards.map((item, index) => (
+                                <NgoCard key={index} {...item} />
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="not-found">
+                            <figure>
+                                <Image src="/assets/images/not-found.gif" width="120" height="120" alt="not found" ></Image>
+                            </figure>
+                            <p className="no-data">No NGO available</p>
+                        </div>
+                    )}
                 </div>
             </div>
         </>

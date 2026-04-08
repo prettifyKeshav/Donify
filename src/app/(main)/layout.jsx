@@ -1,7 +1,7 @@
 import MainTemplates from '@/src/components/templates/MainTemplates'
 import React from 'react'
 
-const Layout = ({ children }) => {
+const MainLayout = ({ children }) => {
   return (
     <>
       <MainTemplates>
@@ -11,4 +11,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout
+export default MainLayout
