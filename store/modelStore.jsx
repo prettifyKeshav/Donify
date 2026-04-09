@@ -3,7 +3,6 @@ import { create } from 'zustand';
 export const useModalStore = create((set) => {
     const closeAll = () =>
         set({
-            isSearchOpen: false,
             isHamOpen: false,
             isEnquireOpen: false,
             isVideoOpen: false,
@@ -17,7 +16,6 @@ export const useModalStore = create((set) => {
         });
 
     return {
-        isSearchOpen: false,
         isHamOpen: false,
         isEnquireOpen: false,
         isVideoOpen: false,
@@ -28,12 +26,6 @@ export const useModalStore = create((set) => {
         isAddressOpen: false,
         isPassChangeOpen: false,
         isFilterOpen: false,
-
-        openSearch: () => {
-            closeAll();
-            set({ isSearchOpen: true });
-        },
-        closeSearch: () => set({ isSearchOpen: false }),
 
         openHam: () => {
             closeAll();

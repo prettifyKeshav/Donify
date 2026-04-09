@@ -84,8 +84,6 @@ const FundraisersCard = ({
                     Donate Now
                 </Button>
             </figcaption>
-
-
         </div >
     );
 };

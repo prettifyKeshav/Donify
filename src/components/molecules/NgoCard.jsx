@@ -46,7 +46,7 @@ const NgoCard = (
                     </div>
 
                     <div className="btn-group">
-                        <Button className='btn primary-btn' href=''>Donate Now</Button>
+                        <Button className='btn primary-btn' href='/'>Donate Now</Button>
                         <Button className='btn secondary-border' href={detailHref}>Know More</Button>
                     </div>
                 </figcaption>

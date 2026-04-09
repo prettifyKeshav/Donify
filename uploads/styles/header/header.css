@@ -3231,6 +3231,28 @@ footer .bottom-footer ul li a:hover {
 .ham-pop nav {
   flex: 1;
 }
+.ham-pop::before {
+  content: "";
+  position: absolute;
+  width: 325px;
+  height: 530px;
+  line-height: 0;
+  top: 103%;
+  right: -110px;
+  transform: translateY(-50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-mask-image: url(/assets/vector/logo-vector-2.png);
+          mask-image: url(/assets/vector/logo-vector-2.png);
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  aspect-ratio: 1.22;
+  line-height: 0;
+  background: rgba(102, 102, 102, 0.0784313725);
+  transitionc: 1s ease-in-out;
+}
 .ham-pop.is-open {
   transform: translateX(0%);
 }
@@ -3247,8 +3269,8 @@ footer .bottom-footer ul li a:hover {
 }
 .ham-pop .model-body {
   padding: 0px 40px 30px;
-  margin-top: 80px;
-  height: calc(100% - 80px);
+  margin-top: 25px;
+  height: calc(100% - 25px);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -3275,7 +3297,7 @@ footer .bottom-footer ul li a:hover {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   line-height: 0;
   font-weight: 600;
   letter-spacing: 4px;

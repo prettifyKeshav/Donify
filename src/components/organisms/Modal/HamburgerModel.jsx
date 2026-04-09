@@ -10,11 +10,11 @@ const HamburgerModel = () => {
     const closeHam = useModalStore((state) => state.closeHam)
 
     const menuItems = [
-        { id: 1, title: "Enroll your NGO", href: "/" },
-        { id: 2, title: "Donate Monthly", href: "/" },
-        { id: 3, title: "Fundraisers", href: "/" },
+        { id: 1, title: "Enroll your NGO", href: "/ngo-landing" },
+        { id: 2, title: "Donate Monthly", href: "/monthly-donor-listing" },
+        { id: 3, title: "Fundraisers", href: "/fundraiser-listing" },
         { id: 4, title: "About Donify", href: "/" },
-        { id: 5, title: "Blogs", href: "/" },
+        { id: 5, title: "Blogs", href: "/blogs" },
         { id: 6, title: "FAQ’s", href: "/" },
         { id: 7, title: "Contact Us", href: "/" },
     ];
@@ -29,6 +29,9 @@ const HamburgerModel = () => {
                 </button>
 
                 <div className="model-body">
+                    <div className="icon">
+                        <Image src="/assets/images/donify-ico.svg" width="50" height="50" className="svg" alt="icon" />
+                    </div>
                     <nav>
                         <ul className="nav-list">
                             {menuItems.map((item) => {

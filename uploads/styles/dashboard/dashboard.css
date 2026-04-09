@@ -1,0 +1,223 @@
+@keyframes shine {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #F1F4F7;
+}
+.dashboard-layout .dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 230px;
+  min-height: 100vh;
+}
+.dashboard-layout .dashboard-content {
+  flex: 1;
+  padding: 28px 32px;
+}
+
+.sidebar {
+  width: 230px;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e8eaf0;
+  z-index: 100;
+}
+.sidebar .sidebar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 20px 24px;
+}
+.sidebar .sidebar-logo img {
+  width: 80px;
+  height: 77px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.sidebar ul {
+  flex: 1;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+}
+.sidebar ul li {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.sidebar ul li:hover {
+  background: #f4f6fb;
+  color: #1a2340;
+}
+.sidebar ul li.sidebar-item-active {
+  background: var(--secondary);
+}
+.sidebar ul li.sidebar-item-active:hover {
+  background: #142b47;
+  color: #1a2340;
+}
+.sidebar ul li.sidebar-item-active a {
+  color: #ffffff;
+}
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  color: rgba(0, 0, 0, 0.7411764706);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  border-radius: 8px;
+}
+
+.dashboard-header {
+  height: 87px;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.dashboard-header .dashboard-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.dashboard-header .dashboard-header-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.dashboard-header .avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #D7E3F1;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+.dashboard-header .name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+.dashboard-header .dashboard-header-chevron {
+  color: #8a93a8;
+}
+
+.my-profile {
+  width: 100%;
+  flex: 1;
+  height: 496px;
+  border-radius: 5px;
+  background: white;
+  padding: 30px 50px;
+}
+.my-profile h2 {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--secondary);
+  margin-bottom: 40px;
+}
+.my-profile .form-grid {
+  max-width: 80%;
+  --item: 2;
+}
+.my-profile .form-grid .submit-btn {
+  margin-top: 20px;
+}
+.my-profile .form-grid .submit-btn a {
+  border-radius: 5px;
+}
+
+.my-ngos .flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.my-ngos .flex-box h2 {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--secondary);
+}
+.my-ngos .flex-box .right a {
+  padding: 8px 17px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
+.my-ngos .grid-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 15px;
+}
+.my-ngos .grid-box .ngo-card {
+  background: var(--white);
+}
+.my-ngos .grid-box .ngo-card figcaption {
+  padding: 30px 20px;
+}
+
+.my-fundraisers .flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.my-fundraisers .flex-box h2 {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--secondary);
+}
+.my-fundraisers .flex-box .right a {
+  padding: 8px 17px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
+.my-fundraisers .grid-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 15px;
+}
+.my-fundraisers .grid-box .ngo-card {
+  background: var(--white);
+}
+.my-fundraisers .grid-box .ngo-card figcaption {
+  padding: 30px 20px;
+}/*# sourceMappingURL=dashboard.css.map */
