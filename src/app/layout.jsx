@@ -2,7 +2,7 @@
 
 // import "./global.css";
 import "@/uploads/styles/header/header.css"
-import HamburgerModel from "../components/organisms/Modal/HamburgerModel";
+import SmoothScroll from "../components/atoms/SmoothScroll";
 
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,8 +21,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body className="antialiased">
-        {children}
-        <HamburgerModel />
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
       </body>
     </html>
   );

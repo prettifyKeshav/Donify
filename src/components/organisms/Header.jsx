@@ -4,8 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import "@/uploads/styles/header/header.css"
 import Button from "../atoms/Button";
+import { useModalStore } from "@/store/modelStore";
 
 const Header = () => {
+    const openHam = useModalStore((state) => state.openHam);
 
     return (
         <header className="header-fixed">
@@ -39,7 +41,7 @@ const Header = () => {
                         </li>
 
                         <li className="ham-parent">
-                            <button type="button" className="ham-btn">
+                            <button type="button" className="ham-btn" onClick={openHam}>
                                 <span></span>
                                 <span></span>
                                 <span></span>

@@ -985,7 +985,7 @@ button {
   top: 0;
   z-index: 5;
   opacity: 0;
-  background: rgba(0, 0, 0, 0.4588235294);
+  background: rgba(0, 0, 0, 0.7215686275);
   transform: translateY(100%);
   transition: 0s ease 0.5s, opacity 0.5s ease;
   cursor: pointer;
@@ -3292,9 +3292,6 @@ footer .bottom-footer ul li a:hover {
 .ham-pop .model-body .nav-list {
   width: 100%;
   flex: 1;
-}
-.ham-pop .model-body .nav-list > li {
-  cursor: pointer;
 }
 .ham-pop .model-body .nav-list > li:not(:last-child) {
   margin-bottom: 15px;

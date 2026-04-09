@@ -3,23 +3,26 @@ import Swipers from '../../molecules/Swipers'
 import Button from '../../atoms/Button'
 
 const TransformativeJourney = () => {
-
     const cards = [
         {
             figureImage: "/assets/images/Home/transformative-journeys/1.jpg",
-            title: "Heroes like you helped my son win his battle."
+            title: "Heroes like you helped my son win his battle.",
+            dataVideoSrc: "https://www.youtube.com/embed/EG3n3TRMDXo?si=4HqoHycaR7RSPV3z"
         },
         {
             figureImage: "/assets/images/Home/transformative-journeys/2.jpg",
-            title: "Heroes like you helped my son win his battle."
+            title: "Heroes like you helped my son win his battle.",
+            dataVideoSrc: "https://www.youtube.com/embed/EG3n3TRMDXo?si=4HqoHycaR7RSPV3z"
         },
         {
             figureImage: "/assets/images/Home/transformative-journeys/3.jpg",
-            title: "Heroes like you helped my son win his battle."
+            title: "Heroes like you helped my son win his battle.",
+            dataVideoSrc: "https://www.youtube.com/embed/EG3n3TRMDXo?si=4HqoHycaR7RSPV3z"
         },
         {
             figureImage: "/assets/images/Home/transformative-journeys/1.jpg",
-            title: "Heroes like you helped my son win his battle."
+            title: "Heroes like you helped my son win his battle.",
+            dataVideoSrc: "https://www.youtube.com/embed/EG3n3TRMDXo?si=4HqoHycaR7RSPV3z"
         },
         {
             figureImage: "/assets/images/Home/transformative-journeys/2.jpg",
@@ -27,7 +30,8 @@ const TransformativeJourney = () => {
         },
         {
             figureImage: "/assets/images/Home/transformative-journeys/3.jpg",
-            title: "Heroes like you helped my son win his battle."
+            title: "Heroes like you helped my son win his battle.",
+            dataVideoSrc: "https://www.youtube.com/embed/EG3n3TRMDXo?si=4HqoHycaR7RSPV3z"
         },
     ]
 
