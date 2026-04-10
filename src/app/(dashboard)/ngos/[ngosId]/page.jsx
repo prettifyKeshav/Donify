@@ -1,10 +1,11 @@
-import DashboardDonations from '@/src/components/pages/Dashboards/Donations'
 import React from 'react'
+
+import DashboardAddNgos from '@/src/components/pages/Dashboards/Nogs/detail'
 
 const page = () => {
     return (
         <>
-            <DashboardDonations />
+            <DashboardAddNgos />
         </>
     )
 }

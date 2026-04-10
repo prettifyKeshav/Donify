@@ -63,34 +63,70 @@
   align-items: center;
   width: 100%;
 }
-.fundraiser-listing-banner .banner .banner-wrapper .search-bar form select {
-  background: var(--gray);
-  width: 300px;
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form button {
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 8px 16px;
 }
-.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .search-input {
-  border: none;
-  padding: 6px 16px;
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form img {
+  width: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .custom-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: #fff;
   width: 318px;
   height: 40px;
-  angle: 0 deg;
-  opacity: 1;
   border-radius: 10px;
 }
-.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .search-btn {
-  border-radius: 10px;
-  padding: 6px 16px;
-  background: var(--primary);
-  border: 1px solid var(--primary);
-  color: var(--white);
-  gap: 10px;
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .custom-search .search-icon-wrap {
   display: flex;
-  justify-content: center;
   align-items: center;
-  transition: 0.5s ease;
 }
-.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .search-btn:hover {
-  background: var(--white);
-  color: var(--primary);
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .custom-search .search-input-field {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .custom-search .search-input-field::-moz-placeholder {
+  font-size: 14px;
+  color: #666666;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .custom-search .search-input-field::placeholder {
+  font-size: 14px;
+  color: #666666;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .location-dropdown, .fundraiser-listing-banner .banner .banner-wrapper .search-bar form .ngos-dropdown {
+  max-width: 122px !important;
+  height: 32px;
+  border-radius: 5px;
+  padding: 8px 17px;
+  background: transparent;
+  border: none;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .location-dropdown .sel-display, .fundraiser-listing-banner .banner .banner-wrapper .search-bar form .ngos-dropdown .sel-display {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .location-dropdown .sel-panel, .fundraiser-listing-banner .banner .banner-wrapper .search-bar form .ngos-dropdown .sel-panel {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .location-dropdown .sel-panel .sel-panel-inner ul li, .fundraiser-listing-banner .banner .banner-wrapper .search-bar form .ngos-dropdown .sel-panel .sel-panel-inner ul li {
+  white-space: nowrap;
+}
+.fundraiser-listing-banner .banner .banner-wrapper .search-bar form .location-dropdown .sel-list, .fundraiser-listing-banner .banner .banner-wrapper .search-bar form .ngos-dropdown .sel-list {
+  max-height: 100px;
+  margin: 0;
 }
 
 .fundraiser-listing-section .tab-nav {

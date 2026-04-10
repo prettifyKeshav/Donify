@@ -34,18 +34,101 @@
      object-fit: cover;
 }
 .ngo-listing-banner .banner .banner-wrapper {
-  bottom: 45%;
-  text-align: center;
+  bottom: 25%;
 }
 .ngo-listing-banner .banner .banner-wrapper h1 {
   color: var(--white);
   margin-bottom: 10px;
+  text-align: center;
 }
 .ngo-listing-banner .banner .banner-wrapper p {
   color: var(--white);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.1;
+  text-align: center;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar {
+  width: 675px;
+  height: 66px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 30px auto 0;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form button {
+  width: 90px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form img {
+  width: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form .custom-search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: #fff;
+  width: 380px;
+  height: 40px;
+  border-radius: 10px;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form .custom-search .search-icon-wrap {
+  display: flex;
+  align-items: center;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form .custom-search .search-input-field {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form .custom-search .search-input-field::-moz-placeholder {
+  font-size: 14px;
+  color: #666666;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form .custom-search .search-input-field::placeholder {
+  font-size: 14px;
+  color: #666666;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form .location-dropdown, .ngo-listing-banner .banner .banner-wrapper .search-bar form .ngos-dropdown {
+  max-width: 122px !important;
+  height: 32px;
+  border-radius: 5px;
+  padding: 8px 17px;
+  background: transparent;
+  border: none;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form .location-dropdown .sel-display, .ngo-listing-banner .banner .banner-wrapper .search-bar form .ngos-dropdown .sel-display {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form .location-dropdown .sel-panel, .ngo-listing-banner .banner .banner-wrapper .search-bar form .ngos-dropdown .sel-panel {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form .location-dropdown .sel-panel .sel-panel-inner ul li, .ngo-listing-banner .banner .banner-wrapper .search-bar form .ngos-dropdown .sel-panel .sel-panel-inner ul li {
+  white-space: nowrap;
+}
+.ngo-listing-banner .banner .banner-wrapper .search-bar form .location-dropdown .sel-list, .ngo-listing-banner .banner .banner-wrapper .search-bar form .ngos-dropdown .sel-list {
+  max-height: 100px;
+  margin: 0;
 }
 
 .ngo-listing-section .tab-nav {

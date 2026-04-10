@@ -43,33 +43,60 @@
                     justify-content: space-between
                     align-items: center
                     width: 100%
-                    select
-                        background: $gray
-                        width: 300px
-                    .search-input
-                        border: none
-                        padding: 6px 16px
+                    button
+                        width: 90px
+                        height: 40px
+                        border-radius: 10px
+                        padding: 8px 16px
+
+                    img
+                        width: 24px
+                        object-fit: contain
+                    .custom-search 
+                        display: flex
+                        align-items: center
+                        gap: 8px
+                        padding: 6px 8px
+                        background: #fff
                         width: 318px
                         height: 40px
-                        angle: 0 deg
-                        opacity: 1
                         border-radius: 10px
 
-                    .search-btn
-                        border-radius: 10px
-                        padding: 6px 16px
-                        background: $primary
-                        border: 1px solid $primary
-                        color: $white
-                        gap: 10px
-                        display: flex
-                        justify-content: center
-                        align-items: center
-                        transition: 0.5s ease
-                        &:hover
-                            background: $white
-                            color: $primary
+                        .search-icon-wrap 
+                            display: flex
+                            align-items: center
+                        .search-input-field 
+                            width: 100%
+                            border: none
+                            outline: none
+                            font-size: 14px
+                            line-height: 16px
+                            color: #666666
 
+                        .search-input-field::placeholder 
+                            font-size: 14px
+                            color: #666666
+
+                    .location-dropdown,.ngos-dropdown
+                        max-width: 122px !important
+                        height: 32px
+                        border-radius: 5px
+                        padding: 8px 17px
+                        background: transparent
+                        border: none
+                        .sel-display
+                            font-weight: 500
+                            font-size: 16px
+                            line-height: 1.2
+                        .sel-panel
+                            width: fit-content
+                            .sel-panel-inner
+                                ul
+                                    li
+                                        white-space: nowrap
+                        .sel-list 
+                            max-height: 100px
+                            margin: 0
 
 
                 

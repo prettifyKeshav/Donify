@@ -1,9 +1,10 @@
+import DashboardForgotPassword from '@/src/components/pages/Dashboards/ForgotPassword'
 import React from 'react'
 
 const page = () => {
     return (
         <>
-            <h2>Forgot Password</h2>
+            <DashboardForgotPassword />
         </>
     )
 }
