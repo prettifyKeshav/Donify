@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import "@/uploads/styles/header/header.css"
-import Button from "../atoms/Button";
+import { useModalStore } from "@/store/modelStore";
 
 const Header = () => {
+    const openLogin = useModalStore((state) => state.openLogin)
 
     return (
         <header className="header-fixed">
@@ -30,9 +31,9 @@ const Header = () => {
                             <Link href="#Faqs" className="slideto">FAQs</Link>
                         </li>
                         <li>
-                            <Button className="btn primary-btn " href="/">
+                            <button className="btn primary-btn " href="/" onClick={openLogin}>
                                 Enroll your NGO on Donify
-                            </Button>
+                            </button>
                         </li>
                     </ul>
                 </div>

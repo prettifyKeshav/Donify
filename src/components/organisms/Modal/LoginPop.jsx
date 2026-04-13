@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from "next/image"
 import Link from "next/link"
 import { useModalStore } from '@/store/modelStore';
@@ -7,6 +7,7 @@ import { useModalStore } from '@/store/modelStore';
 const LoginPop = () => {
     const isOpen = useModalStore((state) => state.isLoginOpen)
     const closeLogin = useModalStore((state) => state.closeLogin)
+    const [showOTP, setShowOTP] = useState(false);
 
     const moveNext = (e, index) => {
         const otpInputs = document.querySelectorAll(".otp-box input");
@@ -44,10 +45,18 @@ const LoginPop = () => {
         };
     }, []);
 
+    const handleModelChange = () => {
+        setShowOTP(true);
+    };
+
+    const handleBack = () => {
+        setShowOTP(false);
+    };
+
     return (
         <div className={`model login-pop ${isOpen ? "is-open" : ""}`}>
             <button className="close" type="button" onClick={closeLogin}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 0.75L23.25 23.25M0.75 23.25L23.25 0.75" stroke="black" strokeLinecap="round" strokeLinejoin="round" /></svg></button>
-            <div className="model-body " >
+            <div className={`model-body ${showOTP ? "hide-model" : ""}`}>
                 <div className="title">
                     <div className="icon">
                         <Image src="/assets/images/donify-ico.svg" width="68" height="64" alt="Logo"></Image>
@@ -58,11 +67,11 @@ const LoginPop = () => {
                     <div className="form-group">
                         <input type="text" name="text" className="form-control" />
                         <label htmlFor="text">Enter email  OR Phone no </label>
-                        <p className="verify">Invalid</p>
+                        {/* <p className="verify">Invalid</p> */}
                     </div>
 
                     <div className="sbmt-btn-div">
-                        <button type="button" className="btn secondary-btn">CONTINUE</button>
+                        <button type="button" className="btn secondary-btn" onClick={handleModelChange}>CONTINUE</button>
                     </div>
                 </div>
                 <div className="split-sec"><p>OR</p></div>
@@ -84,9 +93,9 @@ const LoginPop = () => {
                 </div>
             </div>
 
-            <div className="model-body otp-model-body hide-model">
+            <div className={`model-body otp-model-body ${showOTP ? "" : "hide-model"}`}>
 
-                <Link href="" className='back-btn'>
+                <Link href="" className='back-btn' onClick={handleBack}>
                     <Image src="/assets/icon/back-btn.svg" width={9} height={16} alt="back btn"></Image>
                     <p>Back</p>
                 </Link>

@@ -1118,9 +1118,6 @@ button {
   background: var(--secondary);
   color: var(--white);
 }
-.btn.gradient-btn {
-  border: 1px solid var(--secondary);
-}
 .btn.gradient-btn::before {
   content: "";
   position: absolute;
@@ -2504,6 +2501,10 @@ header .header-wrapper .colB ul li .slideto {
   line-height: 1;
   color: #173254;
   margin-right: 30px;
+  transition: 0.5s ease;
+}
+header .header-wrapper .colB ul li .slideto:hover {
+  color: var(--primary);
 }
 header .header-wrapper .colB ul .ham-parent {
   display: flex;

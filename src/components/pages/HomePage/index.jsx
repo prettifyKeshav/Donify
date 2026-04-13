@@ -23,7 +23,7 @@ const HomePage = () => {
                 description="Donify is a purpose-driven crowdfunding platform enabling individuals, medical causes, and NGOs to raise funds efficiently in India, supported by strong governance, transparency, and donor confidence."
                 btnChildren="Start a fundraiser"
                 btnClassName="btn primary-btn"
-                firstBtnHref="/fundraiser-listing"
+                firstBtnHref="/ngo-listing"
             />
             <TopDonation />
             <AboutDonify />

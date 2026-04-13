@@ -57,15 +57,35 @@
   align-items: center;
   gap: 70px;
 }
+@keyframes Sspin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.home-secB .flex-box .rotate-infinite-slow {
+  animation: Sspin 30s linear infinite;
+}
 .home-secB .flex-box figure {
   width: 436px;
   height: 404px;
+  position: relative;
 }
 .home-secB .flex-box figure img {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.home-secB .flex-box figure .d-logo {
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  width: 117px;
+  height: 129px;
 }
 .home-secB .flex-box .content h2 {
   margin-bottom: 10px;
@@ -428,10 +448,19 @@
   align-items: center;
 }
 
+.home-secF {
+  background: url("/assets/images/NGO/ngo-banner.jpg");
+  background-image: url("/assets/images/NGO/ngo-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
 .home-secF .banner {
-  height: 100vh;
+  height: auto;
   overflow: hidden;
-  background: #173254;
+  background: rgba(23, 50, 84, 0.9294117647);
+  padding: 100px 0;
 }
 .home-secF .banner .banner-img {
   position: absolute;
@@ -442,6 +471,9 @@
   -o-object-fit: cover;
      object-fit: cover;
   opacity: 0.1;
+}
+.home-secF .banner .banner-wrapper {
+  position: relative;
 }
 .home-secF .banner .banner-wrapper .heading h2 {
   font-weight: 700;

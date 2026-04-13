@@ -8,7 +8,8 @@ const AboutDonify = () => {
                 <div className="container">
                     <div className="flex-box">
                         <figure>
-                            <Image src="/assets/images/donify-ico.svg" width={436} height={404} alt="Donify ico"></Image>
+                            <Image className="rotate-infinite-slow" src="/assets/images/logo-D-wrapper.svg" width={436} height={404} alt="Donify ico"></Image>
+                            <Image className="d-logo" src="/assets/images/logo-D.svg" width={117} height={129} alt="Donify ico"></Image>
                         </figure>
 
                         <div className="content">
@@ -49,7 +50,7 @@ const AboutDonify = () => {
                                     </div>
                                 </div>
                             </div>
-                            <Button className="btn primary-btn">Read More</Button>
+                            <Button className="btn primary-btn" href="/about-us">Read More</Button>
                         </div>
                     </div>
                 </div>

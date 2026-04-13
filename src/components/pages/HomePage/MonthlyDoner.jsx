@@ -113,7 +113,7 @@ const MonthlyDoner = () => {
                                 />
 
                                 <div className="btn-wrapper">
-                                    <Button className="btn secondary-border" href="/">View all</Button>
+                                    <Button className="btn secondary-border" href="/monthly-donor-listing">View all</Button>
                                 </div>
                             </div>
                         </div>

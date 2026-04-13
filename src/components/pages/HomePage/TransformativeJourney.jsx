@@ -67,7 +67,7 @@ const TransformativeJourney = () => {
                         />
 
                         <div className="bottom">
-                            <Button href="/" className="btn primary-btn">
+                            <Button href="/ngo-listing" className="btn primary-btn">
                                 Start Fundraising for Free
                             </Button>
                         </div>

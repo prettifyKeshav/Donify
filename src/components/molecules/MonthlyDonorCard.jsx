@@ -30,7 +30,7 @@ const MonthlyDonorCard = ({
                         <h5>{CardPrice} / {CardPricePeriod}</h5>
                     </div>
 
-                    <div className="btn primary-btn">{CardBtnText}</div>
+                    <div className="btn primary-btn" >{CardBtnText}</div>
                 </div>
             </figcaption>
         </Link>

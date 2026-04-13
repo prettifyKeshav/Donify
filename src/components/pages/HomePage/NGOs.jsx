@@ -67,7 +67,7 @@ const NGOs = () => {
                 </div>
                 <div className="home-secF">
                     <div className="banner">
-                        <img className='banner-img' src="/assets/images/NGO/ngo-banner.jpg" alt="banner" />
+                        {/* <img className='banner-img' src="/assets/images/NGO/ngo-banner.jpg" alt="banner" /> */}
                         <div className="banner-wrapper">
                             <div className="container">
                                 <div className="heading">

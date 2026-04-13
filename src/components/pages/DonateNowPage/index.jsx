@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import "@/uploads/styles/donate-now/donate-now.css"
-import Button from '../../atoms/Button'
 import Image from 'next/image'
 
 const DonateNowPage = () => {

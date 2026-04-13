@@ -16,8 +16,8 @@ const EmpoweringCommunities = () => {
                         btnClassName="btn primary-btn"
                         btnChildren2="Donate to a fundraiser"
                         btnClassName2="btn secondary-btn-white"
-                        firstBtnHref="/"
-                        secondBtnHref="/"
+                        firstBtnHref="/ngo-listing"
+                        secondBtnHref="/fundraiser-listing"
                     />
                 </div>
             </section>
