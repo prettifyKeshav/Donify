@@ -5,6 +5,7 @@ import "@/uploads/styles/header/header.css";
 import HamburgerModel from "./Modal/HamburgerModel";
 import Overlay from "../atoms/Overlay";
 import VideoPop from "./Modal/VideoPop";
+import LoginPop from "./Modal/LoginPop";
 
 const Footer = () => {
   return (
@@ -14,10 +15,10 @@ const Footer = () => {
           <div className="container flex-box">
             <h3>Need help to setup your free fundraiser?</h3>
             <div className="btn-group">
-              <Button className="btn white-btn">
+              <Button className="btn white-btn" href="/ngo-landing">
                 Enroll your NGO
               </Button>
-              <Button className="btn primary-btn">
+              <Button className="btn primary-btn" href="/fundraiser-listing">
                 Donate Now
               </Button>
             </div>
@@ -132,6 +133,7 @@ const Footer = () => {
       <HamburgerModel />
       <Overlay />
       <VideoPop />
+      <LoginPop />
     </>
   );
 };

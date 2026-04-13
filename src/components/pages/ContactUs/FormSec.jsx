@@ -1,21 +1,44 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Select from '../../atoms/Select'
-// import "@/uploads/styles/component/custom-dropdown/custom-dropdown.css"
 
 const FormSec = () => {
 
-    const [formData, setFromData] = useState({
+
+    const [formData, setFormData] = useState({
         Selectedcity: "",
     })
-    // console.log(Selectedcity)
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFromData({ ...formData, [name]: value })
+        setFormData({ ...formData, [name]: value })
     }
+
+    useEffect(() => {
+        const inputBoxes = document.querySelectorAll(".form-control");
+        const handleFocus = function () {
+            this.closest(".form-group")?.classList.add("active");
+            this.classList.add("valid");
+        };
+        const handleBlur = function () {
+            if (!this.value.trim()) {
+                this.closest(".form-group")?.classList.remove("active");
+                this.classList.remove("valid");
+            }
+        };
+        inputBoxes.forEach((inputBox) => {
+            inputBox.addEventListener("focus", handleFocus);
+            inputBox.addEventListener("blur", handleBlur);
+        });
+        return () => {
+            inputBoxes.forEach((inputBox) => {
+                inputBox.removeEventListener("focus", handleFocus);
+                inputBox.removeEventListener("blur", handleBlur);
+            });
+        };
+    }, []);
 
     return (
         <>

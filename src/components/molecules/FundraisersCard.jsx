@@ -80,7 +80,7 @@ const FundraisersCard = ({
                         </div>
                     </div>
                 </div>
-                <Button className="btn primary-btn donate-btn">
+                <Button className="btn primary-btn donate-btn" href="/donate-now">
                     Donate Now
                 </Button>
             </figcaption>

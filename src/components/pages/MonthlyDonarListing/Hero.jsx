@@ -2,19 +2,20 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Button from '../../atoms/Button'
-
+import Select from '../../atoms/Select'
 const Hero = () => {
 
-    const [selectedCategory, setSelectedCategory] = useState('Disaster Relief Response')
+    const [formData, setFormData] = useState({
+        category: "",
+    })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value })
+    }
+
     const [amount, setAmount] = useState(3000)
     const [customAmount, setCustomAmount] = useState('₹3,000')
-
-    const categories = [
-        'Disaster Relief Response',
-        'Child Education Fund',
-        'Medical Aid Program',
-        'Food & Nutrition Drive',
-    ]
 
     const presetAmounts = [
         { label: '₹1,000/M', value: 1000 },
@@ -43,17 +44,25 @@ const Hero = () => {
                             <div className="box-wrapper">
                                 <h1>Start a Ripple of Hope Today</h1>
 
-                                <div className="donation-box__select-wrapper">
-                                    <select
-                                        className="donation-box__select"
-                                        value={selectedCategory}
-                                        onChange={(e) => setSelectedCategory(e.target.value)}
-                                    >
-                                        {categories.map((cat) => (
-                                            <option key={cat} value={cat}>{cat}</option>
-                                        ))}
-                                    </select>
+                                <div className="select-wrapper">
+                                    <Select
+                                        variant="quinary"
+                                        label="Disaster Relief Response"
+                                        name="category"
+                                        className="select-dropdown"
+                                        id="category"
+                                        value={formData.category}
+                                        onChange={handleChange}
+                                        options={[
+                                            'Disaster Relief Response',
+                                            'Child Education Fund',
+                                            'Medical Aid Program',
+                                            'Food & Nutrition Drive',
+                                        ]}
+                                    />
                                 </div>
+
+
 
                                 <div className="donation-box__input-wrapper">
                                     <input

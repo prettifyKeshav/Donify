@@ -33,22 +33,11 @@
                     margin: auto
                     line-height: 1.1
                     margin-bottom: 20px
-                .donation-box__select-wrapper
+                .select-wrapper
                     position: relative
-                    &::after
-                        content: ""
-                        position: absolute
-                        right: 14px
-                        top: 50%
-                        transform: translateY(-50%)
-                        pointer-events: none
-                        background: url('/assets/icon/arrow-down-gray.svg') no-repeat 
-                        background-size: contain
-                        width: 15px
-                        height: 9px
-                    .donation-box__select
+                    .select-dropdown
                         width: 100%
-                        padding: 12px 36px 12px 14px
+                        padding: 12px 16px 12px 14px
                         border: 1px solid #ddd
                         border-radius: 8px
                         appearance: none
@@ -57,9 +46,24 @@
                         color: $text
                         font-weight: 400
                         font-size: 16px
+                        height: 50px
                         &:focus
                             outline: none
                             border-color: $secondary
+                        img
+                            width: 17px
+                            height: 11px
+                        .sel-display
+                            font-weight: 400
+                            font-size: 16px
+                            line-height: 1.2
+                            color: $text
+                        .sel-panel
+                            width: 100%
+                            .sel-panel-inner
+                                ul
+                                    li
+                                        white-space: nowrap
                 .donation-box__input-wrapper
                     width: 100%
                 .donation-box__input

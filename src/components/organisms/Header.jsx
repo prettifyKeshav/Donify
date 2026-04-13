@@ -8,6 +8,7 @@ import { useModalStore } from "@/store/modelStore";
 
 const Header = () => {
     const openHam = useModalStore((state) => state.openHam);
+    const openLogin = useModalStore((state) => state.openLogin)
 
     return (
         <header className="header-fixed">
@@ -26,7 +27,7 @@ const Header = () => {
                             </Button>
                         </li>
                         <li>
-                            <Button className="btn primary-btn " href="/">
+                            <Button className="btn primary-btn " href="/fundraiser-listing">
                                 Donate Now
                             </Button>
                         </li>
@@ -36,8 +37,9 @@ const Header = () => {
                             </Button>
                         </li>
 
-                        <li>
-                            <Link href="/" className="login">Login/ Join Us</Link>
+                        <li className="login-wrapper">
+                            <Image src="/assets/images/user-ico.png" width={33} height={33} alt="ico" ></Image>
+                            <Link href="/" className="login" onClick={openLogin}>Login/ Join Us</Link>
                         </li>
 
                         <li className="ham-parent">

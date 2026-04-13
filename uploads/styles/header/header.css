@@ -2485,6 +2485,11 @@ header .header-wrapper .colB ul {
   align-items: center;
   gap: 20px;
 }
+header .header-wrapper .colB ul .login-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
 header .header-wrapper .colB ul li a {
   font-weight: 600;
   font-size: 16px;
@@ -3357,4 +3362,244 @@ footer .bottom-footer ul li a:hover {
   height: 24px;
   filter: invert(1);
   transition: 0.5s ease;
+}
+
+.login-pop, .signUp-pop {
+  max-width: 480px;
+  background: var(--white);
+  right: 0;
+  transform: translateX(100%);
+  transition: 0.5s ease;
+  background: var(--white);
+}
+.login-pop.is-open, .signUp-pop.is-open {
+  transform: translateX(0%);
+}
+.login-pop .close, .signUp-pop .close {
+  top: 25px;
+  right: 25px;
+}
+@media only screen and (max-width: 675px) {
+  .login-pop .close, .signUp-pop .close {
+    top: 20px;
+    right: 20px;
+  }
+}
+.login-pop .close path, .signUp-pop .close path {
+  stroke: var(--black);
+}
+.login-pop .model-body, .signUp-pop .model-body {
+  padding: 0 35px 30px;
+  height: 100%;
+  overflow-y: auto;
+  margin-top: 40px;
+  height: calc(100% - 40px);
+  transition: 0.5s ease;
+}
+@media only screen and (max-width: 675px) {
+  .login-pop .model-body, .signUp-pop .model-body {
+    padding: 40px 25px 50px;
+  }
+}
+.login-pop .model-body .title, .signUp-pop .model-body .title {
+  margin-bottom: 4.5rem;
+}
+.login-pop .model-body .title .icon, .signUp-pop .model-body .title .icon {
+  height: 76px;
+  width: 102px;
+  line-height: 0;
+  margin: 0 auto 25px;
+}
+.login-pop .model-body .title .icon svg path, .signUp-pop .model-body .title .icon svg path {
+  fill: #000;
+}
+.login-pop .model-body .title .icon img, .signUp-pop .model-body .title .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.login-pop .model-body .title h2, .signUp-pop .model-body .title h2 {
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  color: black;
+}
+.login-pop .model-body .form, .signUp-pop .model-body .form {
+  --gaptb: 15px;
+  --item: 1;
+  --labelbefore: var(--text);
+  --labelafter: #000;
+  --borderbefore: var(--text);
+  --borderafter: #000;
+}
+.login-pop .model-body .form .verify, .signUp-pop .model-body .form .verify {
+  position: absolute;
+  left: 0;
+  color: red;
+  font-weight: 500;
+  font-size: 14px;
+  top: calc(100% + 10px);
+}
+.login-pop .model-body .sbmt-btn-div, .signUp-pop .model-body .sbmt-btn-div {
+  margin: 40px 0 20px;
+  text-align: center;
+}
+.login-pop .model-body .sbmt-btn-div .btn, .signUp-pop .model-body .sbmt-btn-div .btn {
+  width: 100%;
+  --height: 40px;
+  border-radius: 5px;
+  border-bottom-width: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.login-pop .model-body .split-sec, .signUp-pop .model-body .split-sec {
+  overflow: hidden;
+}
+.login-pop .model-body .split-sec p, .signUp-pop .model-body .split-sec p {
+  text-align: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  color: var(--text);
+  font-weight: 500;
+}
+.login-pop .model-body .split-sec p::before, .login-pop .model-body .split-sec p::after, .signUp-pop .model-body .split-sec p::before, .signUp-pop .model-body .split-sec p::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 200px;
+  height: 1px;
+  background: #ECECEC;
+}
+.login-pop .model-body .split-sec p::before, .signUp-pop .model-body .split-sec p::before {
+  left: calc(100% + 12px);
+}
+.login-pop .model-body .split-sec p::after, .signUp-pop .model-body .split-sec p::after {
+  right: calc(100% + 12px);
+}
+.login-pop .model-body .btm-social-wrp, .signUp-pop .model-body .btm-social-wrp {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+  margin: 40px 0;
+}
+.login-pop .model-body .btm-social-wrp > *, .signUp-pop .model-body .btm-social-wrp > * {
+  flex: 1;
+}
+.login-pop .model-body .btm-social-wrp svg, .signUp-pop .model-body .btm-social-wrp svg {
+  width: auto;
+}
+.login-pop .model-body .btm-social-wrp .google-btn, .login-pop .model-body .btm-social-wrp .facebook-btn, .signUp-pop .model-body .btm-social-wrp .google-btn, .signUp-pop .model-body .btm-social-wrp .facebook-btn {
+  opacity: 1;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 8px 23px;
+  background: white;
+}
+.login-pop .model-body .btm-social-wrp a, .signUp-pop .model-body .btm-social-wrp a {
+  color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 10%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.login-pop .model-body .btm-social-wrp a svg path, .signUp-pop .model-body .btm-social-wrp a svg path {
+  fill: var(--secondary);
+}
+.login-pop .model-body .btm-social-wrp a:hover, .signUp-pop .model-body .btm-social-wrp a:hover {
+  background: var(--secondary);
+  color: var(--white);
+}
+.login-pop .model-body .btm-social-wrp a:hover svg path, .signUp-pop .model-body .btm-social-wrp a:hover svg path {
+  fill: var(--white);
+}
+.login-pop .model-body .non_member, .signUp-pop .model-body .non_member {
+  text-align: center;
+  color: var(--text);
+}
+.login-pop .model-body .non_member .signup, .signUp-pop .model-body .non_member .signup {
+  color: var(--black);
+}
+.login-pop .otp-model-body, .signUp-pop .otp-model-body {
+  transition: 0.5s ease;
+}
+.login-pop .otp-model-body .back-btn, .signUp-pop .otp-model-body .back-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.login-pop .otp-model-body .back-btn:hover p, .signUp-pop .otp-model-body .back-btn:hover p {
+  margin-left: 3px;
+}
+.login-pop .otp-model-body .back-btn p, .signUp-pop .otp-model-body .back-btn p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--secondary);
+  transition: 0.3s ease;
+}
+.login-pop .otp-model-body .back-btn img, .signUp-pop .otp-model-body .back-btn img {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.login-pop .otp-model-body .title, .signUp-pop .otp-model-body .title {
+  text-align: center;
+  padding-top: 100px;
+}
+.login-pop .otp-model-body .title h4, .signUp-pop .otp-model-body .title h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.login-pop .otp-model-body .title p, .signUp-pop .otp-model-body .title p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+}
+.login-pop .otp-model-body .form .otp-box, .signUp-pop .otp-model-body .form .otp-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.login-pop .otp-model-body .form .otp-box input, .signUp-pop .otp-model-body .form .otp-box input {
+  width: 59px;
+  height: 51px;
+  padding: 10px;
+  border-radius: 5px !important;
+  border: 1px solid #cccccc;
+  font-size: 24px;
+  text-align: center;
+  outline: none;
+  transition: 0.2s;
+  color: #666666;
+}
+.login-pop .otp-model-body .form .otp-box input .otp-box input:focus, .signUp-pop .otp-model-body .form .otp-box input .otp-box input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+.login-pop .otp-model-body .resend-otp, .signUp-pop .otp-model-body .resend-otp {
+  text-align: center;
+  margin: 40px auto;
+}
+.login-pop .otp-model-body .resend-otp p, .signUp-pop .otp-model-body .resend-otp p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+}
+.login-pop .otp-model-body .resend-otp p a, .signUp-pop .otp-model-body .resend-otp p a {
+  color: var(--secondary);
+  font-weight: 500;
+}
+.login-pop .hide-model, .signUp-pop .hide-model {
+  display: none;
 }/*# sourceMappingURL=header.css.map */

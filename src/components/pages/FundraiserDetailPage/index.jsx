@@ -155,8 +155,8 @@ const FundraiserDetailPage = () => {
                             </div>
 
                             <div className="btn-group-one">
-                                <Button className='btn primary-btn' href="/fundraiser-detail">Donate Now</Button>
-                                <Button className='btn gray-border' href="/fundraiser-detail">Share</Button>
+                                <Button className='btn primary-btn' href="/donate-now">Donate Now</Button>
+                                <Button className='btn gray-border' href="/">Share</Button>
                             </div>
 
                             <DonationCard

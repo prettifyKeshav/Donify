@@ -1,5 +1,6 @@
 import Button from "../../atoms/Button";
 import Swipers from "../../molecules/Swipers"
+import Image from "next/image";
 
 const MonthlyDoner = () => {
 
@@ -91,7 +92,7 @@ const MonthlyDoner = () => {
                         <div className="banner-wrapper">
                             <div className="container">
                                 <h2>Become a Monthly Donor</h2>
-                                <h3>Donate <span>Mnthly</span></h3>
+                                <h3>Donate &nbsp;<span>M <span className="heart-wrapper"><Image src="/assets/images/Home/heart-wrapper.svg" width={62} height={62} alt="white-wrapper" className="white-circle" ></Image><Image src="/assets/images/Home/heart.svg" className="heart" width={30} height={27} alt="heart" ></Image></span> nthly </span></h3>
 
                                 <Swipers
                                     className="home-secD-swiper"

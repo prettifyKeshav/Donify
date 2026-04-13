@@ -267,6 +267,36 @@
                 text-align: center
                 text-transform: uppercase
                 margin-bottom: 50px
+                color: #ec8049
+                -webkit-text-stroke: 2px $white
+                position: relative
+                span
+                    color: $white
+                    display: flex
+                    align-items: center
+                    display: inline-block
+                    line-height: 0
+                    @keyframes heartPulse 
+                        0%
+                            transform: scale(1)
+                        50% 
+                            transform: scale(1.2)
+                        100% 
+                            transform: scale(1)
+                    .heart-wrapper
+                        position: relative
+                        top: 8px
+                        display: inline-block
+                        animation: heartPulse 2s infinite ease-in-out
+                        .white-circle
+                            
+                        .heart
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%, -50%)
+                            z-index: 2
+
 
             .btn-wrapper
                 width: 100%
