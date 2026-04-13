@@ -10,7 +10,6 @@ const VideoPop = () => {
     useEffect(() => {
         const handleClick = (event) => {
             const videoTarget = event.target.closest("[data-video]");
-            console.log(videoTarget);
             if (videoTarget) {
                 let src = videoTarget.getAttribute("data-video");
                 console.log(src);
@@ -29,7 +28,7 @@ const VideoPop = () => {
     return (
         <div className={`model video-pop ${isOpen ? "is-open" : ""}`}>
             <div className="model-body">
-                <button className="close-video" onClick={closeVideo}>
+                <button className="close-video" onClick={closeVideo} type='button'>
                     <svg
                         width={24}
                         height={24}

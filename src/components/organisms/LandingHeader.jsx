@@ -18,16 +18,16 @@ const Header = () => {
                 <div className="colB">
                     <ul>
                         <li>
-                            <Link href="/" className="slideto">How it Works</Link>
+                            <Link href="#How_It_Works" className="slideto">How it Works</Link>
                         </li>
                         <li>
-                            <Link href="/" className="slideto">NGO Network</Link>
+                            <Link href="#Ngo_Network" className="slideto">NGO Network</Link>
                         </li>
                         <li>
-                            <Link href="/" className="slideto">Testimonials</Link>
+                            <Link href="#Testimonials" className="slideto">Testimonials</Link>
                         </li>
                         <li>
-                            <Link href="/" className="slideto">FAQs</Link>
+                            <Link href="#Faqs" className="slideto">FAQs</Link>
                         </li>
                         <li>
                             <Button className="btn primary-btn " href="/">

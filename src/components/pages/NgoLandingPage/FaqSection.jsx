@@ -26,7 +26,7 @@ const FaqSection = () => {
     return (
         <>
             <section>
-                <div className="faq-sec">
+                <div className="faq-sec" id='Faqs'>
                     <div className="vector-img rotate-infinite">
                         <Image className='' src="/assets/vector/logo-vector-2.png" width={436} height={404} alt='vector'></Image>
                     </div>

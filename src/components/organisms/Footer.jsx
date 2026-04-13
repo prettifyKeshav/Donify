@@ -39,10 +39,10 @@ const Footer = () => {
                 <div className="col-md">
                   <h6>About Us</h6>
                   <ul>
-                    <li><Link href="/">About Donify</Link></li>
+                    <li><Link href="/about-us">About Donify</Link></li>
                     <li><Link href="/blogs">Blogs</Link></li>
                     <li><Link href="/">FAQ’s</Link></li>
-                    <li><Link href="/">Contact Us</Link></li>
+                    <li><Link href="/contact-us">Contact Us</Link></li>
                   </ul>
                 </div>
 
@@ -57,15 +57,15 @@ const Footer = () => {
                 <div className="col-md">
                   <h6>Start a Fundraiser for</h6>
                   <ul>
-                    <li><Link href="/ngo-listing">NGO</Link></li>
+                    <li><Link href="/ngo-landing">NGO</Link></li>
                   </ul>
                 </div>
 
                 <div className="col-md">
                   <h6>Donate to</h6>
                   <ul>
-                    <li><Link href="/">Social Causes</Link></li>
-                    <li><Link href="/">NGOs</Link></li>
+                    <li><Link href="/fundraiser-listing">Social Causes</Link></li>
+                    <li><Link href="/ngo-listing">NGOs</Link></li>
                   </ul>
 
                   <div className="social-icons">

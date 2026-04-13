@@ -15,6 +15,7 @@ import NgoCard from "./NgoCard";
 import TestimonialsCard from "../pages/NgoDetailPage/TestimonialsCard";
 import NgoHomeCard from "./NgoHomeCard";
 import NgoTestimonialsCard from "./NgoTestimonialsCard";
+import ValuesCards from "../pages/AboutUs/ValuesCards";
 
 const Swipers = ({
     onSlideClick,
@@ -118,41 +119,19 @@ const Swipers = ({
                                             swiperSlideCard === "BlogsCard" ? (<BlogsCard {...item} />) :
                                                 swiperSlideCard === "NgoCard" ? (<NgoCard {...item} />) :
                                                     swiperSlideCard === "NgoHomeCard" ? (<NgoHomeCard {...item} />) :
-                                                        swiperSlideCard === "TestimonialsCard" ? (<TestimonialsCard {...item} />) :
-                                                            swiperSlideCard === "NgoTestimonialsCard" ? (<NgoTestimonialsCard {...item} />) :
-                                                                enableFancybox ? (
-                                                                    <a href={item.figureImageSrc}
-                                                                        data-fancybox={fancyboxGroup}
-                                                                        data-caption={item.caption || ""}
-                                                                        style={{ display: "block" }}
-                                                                        onClick={(e) => {
-                                                                            if (swiperInstance?.isDragging) {
-                                                                                e.preventDefault();
-                                                                            }
-                                                                        }}
-                                                                    >
-                                                                        <figure>
-                                                                            <Image
-                                                                                src={item.figureImageSrc}
-                                                                                width={imageWidth}
-                                                                                height={imageHeight}
-                                                                                alt="figure image"
-                                                                            />
-                                                                        </figure>
-
-                                                                        {(item.heading || item.description) && (
-                                                                            <figcaption>
-                                                                                {item.heading && <h4>{item.heading}</h4>}
-                                                                                {item.description && <p>{item.description}</p>}
-                                                                            </figcaption>
-                                                                        )}
-                                                                    </a>
-                                                                ) : (
-                                                                    <>
-                                                                        <div
-                                                                            onClick={() => onSlideClick?.(item)}
-                                                                            className={activeTab === item.dataTab ? "active" : ""}
-                                                                            style={{ cursor: "pointer" }}
+                                                        swiperSlideCard === "ValuesCards" ? (<ValuesCards {...item} />) :
+                                                            swiperSlideCard === "TestimonialsCard" ? (<TestimonialsCard {...item} />) :
+                                                                swiperSlideCard === "NgoTestimonialsCard" ? (<NgoTestimonialsCard {...item} />) :
+                                                                    enableFancybox ? (
+                                                                        <a href={item.figureImageSrc}
+                                                                            data-fancybox={fancyboxGroup}
+                                                                            data-caption={item.caption || ""}
+                                                                            style={{ display: "block" }}
+                                                                            onClick={(e) => {
+                                                                                if (swiperInstance?.isDragging) {
+                                                                                    e.preventDefault();
+                                                                                }
+                                                                            }}
                                                                         >
                                                                             <figure>
                                                                                 <Image
@@ -169,9 +148,32 @@ const Swipers = ({
                                                                                     {item.description && <p>{item.description}</p>}
                                                                                 </figcaption>
                                                                             )}
-                                                                        </div>
-                                                                    </>
-                                                                )}
+                                                                        </a>
+                                                                    ) : (
+                                                                        <>
+                                                                            <div
+                                                                                onClick={() => onSlideClick?.(item)}
+                                                                                className={activeTab === item.dataTab ? "active" : ""}
+                                                                                style={{ cursor: "pointer" }}
+                                                                            >
+                                                                                <figure>
+                                                                                    <Image
+                                                                                        src={item.figureImageSrc}
+                                                                                        width={imageWidth}
+                                                                                        height={imageHeight}
+                                                                                        alt="figure image"
+                                                                                    />
+                                                                                </figure>
+
+                                                                                {(item.heading || item.description) && (
+                                                                                    <figcaption>
+                                                                                        {item.heading && <h4>{item.heading}</h4>}
+                                                                                        {item.description && <p>{item.description}</p>}
+                                                                                    </figcaption>
+                                                                                )}
+                                                                            </div>
+                                                                        </>
+                                                                    )}
                         </SwiperSlide>
                     ))}
                 </Swiper>

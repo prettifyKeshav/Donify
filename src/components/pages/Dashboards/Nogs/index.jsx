@@ -155,7 +155,7 @@ const DashboardNgos = () => {
                                 "West Bengal"
                             ]}
                         />
-                        <Button className='btn secondary-btn'>Add NGO</Button>
+                        <Button className='btn secondary-btn' href='/ngos/slug'>Add NGO</Button>
                     </div>
                 </div>
 

@@ -54,7 +54,7 @@ const DashboardAddNgos = () => {
     return (
         <>
             <div className="dashboard-add-ngo">
-                <Link href="/" className="back">
+                <Link href="/ngos" className="back">
                     <figure>
                         <Image src="/assets/icon/back-btn.svg" width={14} height={18} alt="back ico"></Image>
                     </figure>
@@ -166,37 +166,64 @@ const DashboardAddNgos = () => {
                             </div>
                         </form>
                     </div>
-
                 </div>
 
                 <div className="group">
-                    <div className="heading">
+                    <div className="head">
                         <h3>Funds Utilization</h3>
                     </div>
 
-                    <form action="">
+                    <div className="body">
+                        <form action="" className="form form-grid" >
+                            <div className="form-group">
+                                <input type="text" name="name" className="form-control" id="name" />
+                                <label htmlFor="name">Image</label>
+                            </div>
+                        </form>
+                    </div>
 
-                    </form>
                 </div>
 
                 <div className="group">
-                    <div className="heading">
+                    <div className="head">
                         <h3>Gallery</h3>
                     </div>
 
-                    <form action="">
+                    <div className="body">
+                        <form action="" className="form form-grid" >
+                            <div className="form-group">
+                                <input type="text" name="name" className="form-control" id="name" />
+                                <label htmlFor="name">Image</label>
+                            </div>
+                        </form>
+                    </div>
 
-                    </form>
                 </div>
 
                 <div className="group">
-                    <div className="heading">
+                    <div className="head">
                         <h3>Testimonials</h3>
                     </div>
 
-                    <form action="">
+                    <div className="body">
+                        <form action="" className="form form-grid" >
+                            <div className="form-group">
+                                <input type="text" name="name" className="form-control" id="name" />
+                                <label htmlFor="name">NGO Name</label>
+                            </div>
 
-                    </form>
+                            <div className="form-group">
+                                <input type="text" name="name" className="form-control" id="name" />
+                                <label htmlFor="name">Year of Foundation</label>
+                            </div>
+                            <div className="form-group">
+                                <input type="text" name="name" className="form-control" id="name" />
+                                <label htmlFor="name">NGO Overview</label>
+                            </div>
+
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </>

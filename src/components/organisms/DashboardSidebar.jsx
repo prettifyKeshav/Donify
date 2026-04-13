@@ -5,11 +5,11 @@ import Image from "next/image";
 
 const navItems = [
     { label: "Dashboard", href: "/dashboard" },
-    { label: "My Profile", href: "/profile" },
-    { label: "NGOs", href: "/ngos" },
-    { label: "Fundraisers", href: "/fundraisers" },
-    { label: "Donations", href: "/donations" },
-    { label: "Forgot Password", href: "/forgot-password" },
+    { label: "My Profile", href: "/dashboard/profile" },
+    { label: "NGOs", href: "/dashboard/ngos" },
+    { label: "Fundraisers", href: "/dashboard/fundraisers" },
+    { label: "Donations", href: "/dashboard/donations" },
+    { label: "Forgot Password", href: "/dashboard/forgot-password" },
 ];
 
 const DashboardSidebar = () => {
